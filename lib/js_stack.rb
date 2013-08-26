@@ -1,5 +1,7 @@
 require "js_stack/version"
+require 'rails'
 
 module JsStack
-  # Your code goes here...
+  class Engine < ::Rails::Engine
+  end
 end
