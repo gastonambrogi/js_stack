@@ -81,6 +81,14 @@ http://dhruvaray.github.io/backbone-associations/
 #= require js_stack/backbone.associations
 ```
 
+### backbone-virtualcollection 0.4.5
+
+https://github.com/p3drosola/Backbone.VirtualCollection
+
+``` coffeescript
+#= require js_stack/backbone.virtualcollection
+```
+
 ## Contributing
 
 1. Fork it
