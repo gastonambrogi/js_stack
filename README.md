@@ -73,6 +73,14 @@ https://github.com/powmedia/backbone-deep-model
 #= require js_stack/backbone.deepmodel
 ```
 
+### backbone-associations 0.5.1
+
+http://dhruvaray.github.io/backbone-associations/
+
+``` coffeescript
+#= require js_stack/backbone.associations
+```
+
 ## Contributing
 
 1. Fork it

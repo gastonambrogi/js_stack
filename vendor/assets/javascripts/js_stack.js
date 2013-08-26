@@ -4,3 +4,4 @@
 //= require js_stack/backbone.validation
 //= require js_stack/backbone.pageable
 //= require js_stack/backbone.deepmodel
+//= require js_stack/backbone.associations
