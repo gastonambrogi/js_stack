@@ -21,6 +21,41 @@ Modify `application.coffee` (you have to be using asset pipeline):
 #= require js_stack
 ```
 
+## What's included?
+
+### backbone.js 1.0.0
+
+http://backbonejs.org/
+
+``` coffeescript
+#= require js_stack/backbone
+```
+
+### marionette.js 1.1.0
+
+https://github.com/marionettejs/backbone.marionette/tree/master/docs
+
+``` coffeescript
+#= require js_stack/marionette
+```
+
+### backbone.stickit 0.6.3
+
+http://nytimes.github.io/backbone.stickit/
+
+``` coffeescript
+#= require js_stack/backbone.stickit
+```
+
+### backbone.validation 0.8.1
+
+https://github.com/thedersen/backbone.validation
+
+
+``` coffeescript
+#= require js_stack/backbone.validation
+```
+
 ## Contributing
 
 1. Fork it
