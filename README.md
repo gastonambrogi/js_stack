@@ -65,6 +65,14 @@ https://github.com/wyuenho/backbone-pageable
 #= require js_stack/backbone.pageable
 ```
 
+### backbone.deepmodel 0.10.4
+
+https://github.com/powmedia/backbone-deep-model
+
+``` coffeescript
+#= require js_stack/backbone.deepmodel
+```
+
 ## Contributing
 
 1. Fork it
