@@ -56,6 +56,14 @@ https://github.com/thedersen/backbone.validation
 #= require js_stack/backbone.validation
 ```
 
+### backbone-associations 0.5.1
+
+http://dhruvaray.github.io/backbone-associations/
+
+``` coffeescript
+#= require js_stack/backbone.associations
+```
+
 ### backbone-pageable 1.3.2
 
 https://github.com/wyuenho/backbone-pageable
@@ -71,14 +79,6 @@ https://github.com/powmedia/backbone-deep-model
 
 ``` coffeescript
 #= require js_stack/backbone.deepmodel
-```
-
-### backbone-associations 0.5.1
-
-http://dhruvaray.github.io/backbone-associations/
-
-``` coffeescript
-#= require js_stack/backbone.associations
 ```
 
 ### backbone-virtualcollection 0.4.5
