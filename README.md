@@ -89,6 +89,14 @@ https://github.com/p3drosola/Backbone.VirtualCollection
 #= require js_stack/backbone.virtualcollection
 ```
 
+### hamlcoffee 1.x
+
+https://github.com/netzpirat/haml_coffee_assets
+
+``` coffeescript
+#= require js_stack/hamlcoffee
+```
+
 ## Contributing
 
 1. Fork it
