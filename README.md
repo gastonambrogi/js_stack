@@ -97,6 +97,15 @@ https://github.com/netzpirat/haml_coffee_assets
 #= require js_stack/hamlcoffee
 ```
 
+### momentjs 2.1.0
+
+https://github.com/derekprior/momentjs-rails
+
+``` coffeescript
+#= require js_stack/moment
+```
+
+
 ## Contributing
 
 1. Fork it
