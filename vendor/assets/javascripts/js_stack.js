@@ -7,3 +7,4 @@
 //= require js_stack/backbone.deepmodel
 //= require js_stack/backbone.associations
 //= require js_stack/backbone.virtualcollection
+//= require js_stack/moment
