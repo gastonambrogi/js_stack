@@ -108,6 +108,13 @@ https://github.com/derekprior/momentjs-rails
 #= require js_stack/moment
 ```
 
+### js-routes 0.9.3
+
+https://github.com/railsware/js-routes
+
+``` coffescript
+#= require js_stack/jsroutes
+```
 
 ## Contributing
 
