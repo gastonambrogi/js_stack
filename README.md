@@ -112,7 +112,7 @@ https://github.com/derekprior/momentjs-rails
 
 https://github.com/railsware/js-routes
 
-``` coffescript
+``` coffeescript
 #= require js_stack/jsroutes
 ```
 
