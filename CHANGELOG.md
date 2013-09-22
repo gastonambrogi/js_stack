@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.0.4
+
+* added js-routes to default stack [@abditus113]
+
 ## v0.0.3
 
 * added http://momentjs.com/ to default stack [@rindek]
