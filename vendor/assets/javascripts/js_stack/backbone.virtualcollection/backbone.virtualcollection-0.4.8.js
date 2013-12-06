@@ -1,7 +1,7 @@
 (function (global) {
   'use strict';
 
-  var _ = global._, Backbone = global.Backbone, vc, iterators;
+  var _ = global._, Backbone = global.Backbone, vc, iterators, proxy;
 
   if ((!_  || !Backbone) && (typeof require !== 'undefined')) {
     _ = require('underscore');
@@ -14,6 +14,8 @@
     'max', 'min', 'toArray', 'size', 'first', 'head', 'take', 'initial', 'rest',
     'tail', 'drop', 'last', 'without', 'indexOf', 'shuffle', 'lastIndexOf',
     'isEmpty', 'chain'];
+
+  proxy = ['add', 'remove'];
 
   /**
    * Constructor for the virtual collection
@@ -32,13 +34,8 @@
      '_rebuildIndex', '_models', '_onAdd', '_onRemove', '_onChange', '_onReset',
      '_indexAdd', '_indexRemove');
 
-    if (!options.filter) {
-      this.filter = function () { return true; };
-    } else if (_.isFunction(options.filter)) {
-      this.filter = options.filter;
-    } else if (options.filter.constructor === Object) {
-      this.filter = VirtualCollection.buildFilterFromHash(options.filter);
-    }
+    // set filter
+    this.filterFunction = VirtualCollection.buildFilter(options.filter);
 
     // build index
     this._rebuildIndex();
@@ -55,15 +52,24 @@
 
   /**
    * [static] Returns a function that returns true for models that meet the specified conditions
-   * @param  {Object} hash of model attributes
+   * @param  {Object} hash of model attributes or {Function} filter
    * @return {Function} filtering function
    */
-  VirtualCollection.buildFilterFromHash = function (hash) {
-    return function (model) {
-      return !Boolean(_(Object.keys(hash)).detect(function (key) {
-        return model.get(key) !== hash[key];
-      }));
-    };
+  VirtualCollection.buildFilter = function (filter) {
+    if (!filter) {
+      // If no filter is passed, all models should be added
+      return function () { return true; };
+    } else if (_.isFunction(filter)) {
+      // If filter is passed a function, just return it
+      return filter;
+    } else if (filter.constructor === Object) {
+      // If filter is a hash of attributes, return a function that checks each of them
+      return function (model) {
+        return !Boolean(_(Object.keys(filter)).detect(function (key) {
+          return model.get(key) !== filter[key];
+        }));
+      };
+    }
   };
 
   vc = VirtualCollection.prototype;
@@ -78,6 +84,14 @@
     };
   });
 
+  // proxy functions to parent
+  _.each(proxy, function (method) {
+    vc[method] = function () {
+      var args = Array.prototype.slice.call(arguments);
+      return this.collection[method].apply(this.collection, args);
+    };
+  });
+
   /**
    * Returns a model if it belongs to the virtual collection
    * @param  {String} id
@@ -85,7 +99,7 @@
    */
   vc.get = function (id) {
     var model = this.collection.get(id);
-    if (model && this.filter(model)) {
+    if (model && this.filterFunction(model)) {
       return model;
     }
   };
@@ -99,6 +113,9 @@
     return this.collection.get(this.index[index]);
   };
 
+  vc.where = Backbone.Collection.prototype.where;
+  vc.findWhere = Backbone.Collection.prototype.findWhere;
+
   /**
    * Returns the index of the model in the virtual collection
    * @param  {Model} model
@@ -106,6 +123,16 @@
    */
   vc.indexOf = function (model) {
     return this.index.indexOf(model.cid);
+  };
+
+  /**
+   * Returns a JSON representation of all the models in the index
+   * @return {Array} JSON models
+   */
+  vc.toJSON = function() {
+    return _.map(this._models(), function(model) {
+      return model.toJSON();
+    });
   };
 
   /**
@@ -145,6 +172,26 @@
   };
 
   /**
+   * Change the filter and update collection
+   *
+   * @param  {Object} hash of model attributes or {Function} filter
+   * @return {VirtualCollection}
+   */
+
+  vc.updateFilter = function(filter){
+    // Reset the filter
+    this.filterFunction = VirtualCollection.buildFilter(filter);
+
+    // Update the models
+    this._rebuildIndex();
+
+    // Trigger filter event
+    this.trigger('filter', this, filter);
+
+    return this;
+  };
+
+  /**
    * A utility function for unbiding listeners
    * @param  {View} view (marionette view)
    */
@@ -158,8 +205,8 @@
 
   vc._rebuildIndex = function () {
     this.index = [];
-    this.collection.each(function (model) {
-      if (this.filter(model)) {
+    this.collection.each(function (model, index) {
+      if (this.filterFunction(model, index)) {
         this.index.push(model.cid);
       }
     }, this);
@@ -186,7 +233,7 @@
    * @return {undefined}
    */
   vc._onAdd = function (model, collection, options) {
-    if (this.filter(model)) {
+    if (this.filterFunction(model)) {
       this._indexAdd(model);
       this.trigger('add', model, this, options);
     }
@@ -213,7 +260,7 @@
    */
   vc._onChange = function (model, options) {
     var already_here = _.contains(this.index, model.cid);
-    if (this.filter(model)) {
+    if (this.filterFunction(model)) {
       if (already_here) {
         this.trigger('change', model, this, options);
       } else {
