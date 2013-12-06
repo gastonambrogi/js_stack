@@ -26,7 +26,7 @@ Modify `application.coffee` (you have to be using asset pipeline):
 
 ## What's included?
 
-### backbone.js 1.0.0
+### backbone.js 1.1.0
 
 http://backbonejs.org/
 
@@ -34,7 +34,7 @@ http://backbonejs.org/
 #= require js_stack/backbone
 ```
 
-### marionette.js 1.1.0
+### marionette.js 1.4.0
 
 https://github.com/marionettejs/backbone.marionette/tree/master/docs
 
@@ -50,7 +50,7 @@ http://nytimes.github.io/backbone.stickit/
 #= require js_stack/backbone.stickit
 ```
 
-### backbone.validation 0.8.1
+### backbone.validation 0.9.0
 
 https://github.com/thedersen/backbone.validation
 
@@ -59,7 +59,7 @@ https://github.com/thedersen/backbone.validation
 #= require js_stack/backbone.validation
 ```
 
-### backbone-associations 0.5.1
+### backbone-associations 0.5.4
 
 http://dhruvaray.github.io/backbone-associations/
 
@@ -67,7 +67,7 @@ http://dhruvaray.github.io/backbone-associations/
 #= require js_stack/backbone.associations
 ```
 
-### backbone-pageable 1.3.2
+### backbone-pageable 1.4.1
 
 https://github.com/wyuenho/backbone-pageable
 
@@ -84,7 +84,7 @@ https://github.com/powmedia/backbone-deep-model
 #= require js_stack/backbone.deepmodel
 ```
 
-### backbone-virtualcollection 0.4.5
+### backbone-virtualcollection 0.4.8
 
 https://github.com/p3drosola/Backbone.VirtualCollection
 
@@ -100,7 +100,7 @@ https://github.com/netzpirat/haml_coffee_assets
 #= require js_stack/hamlcoffee
 ```
 
-### momentjs 2.1.0
+### momentjs 2.4.0
 
 https://github.com/derekprior/momentjs-rails
 
@@ -108,7 +108,7 @@ https://github.com/derekprior/momentjs-rails
 #= require js_stack/moment
 ```
 
-### js-routes 0.9.3
+### js-routes 0.9.6
 
 https://github.com/railsware/js-routes
 
