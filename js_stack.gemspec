@@ -18,7 +18,6 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
 
-  spec.add_dependency "marionette-rails", "= 1.1.0"
   spec.add_dependency "haml_coffee_assets", "~> 1"
   spec.add_dependency "momentjs-rails", "~> 2.1.0"
   spec.add_dependency "js-routes", "~> 0.9.3"
