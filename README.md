@@ -26,6 +26,14 @@ Modify `application.coffee` (you have to be using asset pipeline):
 
 ## What's included?
 
+### underscore.js 1.5.2
+
+http://underscorejs.org/
+
+``` coffeescript
+#= require js_stack/underscore
+```
+
 ### backbone.js 1.1.0
 
 http://backbonejs.org/
