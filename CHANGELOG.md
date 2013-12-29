@@ -9,6 +9,7 @@
 * updated backbone-pageable 1.3.2 -> 1.4.1 - https://github.com/wyuenho/backbone-pageable#change-log [@gvl]
 * updated backbone-virtualcollection 0.4.5 -> 0.4.8 - https://github.com/p3drosola/Backbone.VirtualCollection#changelog [@gvl]
 * updated momentjs 2.1.0 -> 2.4.0 - https://github.com/moment/moment#240 [@gvl]
+* updated js-routes 0.9.3 -> 0.9.6 - https://github.com/railsware/js-routes/compare/v0.9.3...v0.9.6 [@gvl]
 
 ### Breaking Changes
 * see http://backbonejs.org/#upgrading for notes on upgrading backbone to 1.1.0
