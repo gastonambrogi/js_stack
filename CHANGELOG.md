@@ -7,6 +7,7 @@
 * updated backbone-validation 0.8.1 -> 0.9.0 - https://github.com/thedersen/backbone.validation#v090-commits [@gvl]
 * updated backbone-associations 0.5.1 -> 0.5.4 - https://github.com/dhruvaray/backbone-associations/blob/master/CHANGELOG.md#version-054---diff [@gvl]
 * updated backbone-pageable 1.3.2 -> 1.4.1 - https://github.com/wyuenho/backbone-pageable#change-log [@gvl]
+* updated backbone-virtualcollection 0.4.5 -> 0.4.8 - https://github.com/p3drosola/Backbone.VirtualCollection#changelog [@gvl]
 
 ### Breaking Changes
 * see http://backbonejs.org/#upgrading for notes on upgrading backbone to 1.1.0
