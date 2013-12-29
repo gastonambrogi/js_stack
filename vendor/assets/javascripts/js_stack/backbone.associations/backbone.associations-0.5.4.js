@@ -1,5 +1,5 @@
 //
-//  Backbone-associations.js 0.5.1
+//  Backbone-associations.js 0.5.4
 //
 //  (c) 2013 Dhruva Ray, Jaynti Kanani, Persistent Systems Ltd.
 //  Backbone-associations may be freely distributed under the MIT license.
@@ -20,14 +20,15 @@
     // Exported for the browser and CommonJS.
     var _, Backbone, BackboneModel, BackboneCollection, ModelProto,
         CollectionProto, defaultEvents, AssociatedModel, pathChecker,
-        collectionEvents;
+        collectionEvents, delimiters, pathSeparator;
 
-    if (typeof window === 'undefined') {
+    if (typeof exports !== 'undefined') {
         _ = require('underscore');
         Backbone = require('backbone');
-        if (typeof exports !== 'undefined') {
-            exports = module.exports = Backbone;
+        if (typeof module !== 'undefined' && module.exports) {
+            module.exports = Backbone;
         }
+        exports = Backbone;
     } else {
         _ = root._;
         Backbone = root.Backbone;
@@ -37,15 +38,38 @@
     BackboneCollection = Backbone.Collection;
     ModelProto = BackboneModel.prototype;
     CollectionProto = BackboneCollection.prototype;
-    pathChecker = /[\.\[\]]+/g;
 
     // Built-in Backbone `events`.
     defaultEvents = ["change", "add", "remove", "reset", "sort", "destroy"];
     collectionEvents = ["reset", "sort"];
 
     Backbone.Associations = {
-        VERSION:"0.5.1"
+        VERSION: "0.5.4"
     };
+
+    // Define `getter` and `setter` for `separator`
+    var getSeparator = function() {
+        return pathSeparator;
+    };
+    // Define `setSeperator`
+    var setSeparator = function(value) {
+        if (!_.isString(value) || _.size(value) < 1) {
+            value = ".";
+        }
+        // set private properties
+        pathSeparator = value;
+        pathChecker = new RegExp("[\\" + pathSeparator + "\\[\\]]+", "g");
+        delimiters = new RegExp("[^\\" + pathSeparator + "\\[\\]]+", "g");
+    };
+
+    try {
+        // Define `SEPERATOR` property to Backbone.Associations
+        Object.defineProperty(Backbone.Associations, 'SEPARATOR', {
+            enumerable: true,
+            get: getSeparator,
+            set: setSeparator
+        });
+    } catch (e) {}
 
     // Backbone.AssociatedModel
     // --------------
@@ -54,6 +78,11 @@
     Backbone.Associations.Many = Backbone.Many = "Many";
     Backbone.Associations.One = Backbone.One = "One";
     Backbone.Associations.Self = Backbone.Self = "Self";
+    // Set default separator
+    Backbone.Associations.SEPARATOR = ".";
+    Backbone.Associations.getSeparator = getSeparator;
+    Backbone.Associations.setSeparator = setSeparator;
+    setSeparator();
     // Define `AssociatedModel` (Extends Backbone.Model).
     AssociatedModel = Backbone.AssociatedModel = Backbone.Associations.AssociatedModel = BackboneModel.extend({
         // Define relations with Associated Model.
@@ -159,11 +188,14 @@
                     // Merge in `options` specific to this relation.
                     relationOptions = relation.options ? _.extend({}, relation.options, options) : options;
 
+                    if ((!relatedModel) && (!collectionType))
+                        throw new Error('specify either a relatedModel or collectionType');
+
                     if (attributes[relationKey]) {
                         // Get value of attribute with relation key in `val`.
                         val = _.result(attributes, relationKey);
                         // Map `val` if a transformation function is provided.
-                        val = map ? map(val) : val;
+                        val = map ? map.call(this, val, collectionType ? collectionType : relatedModel) : val;
 
                         // If `relation.type` is `Backbone.Many`,
                         // Create `Backbone.Collection` with passed data and perform Backbone `set`.
@@ -173,49 +205,54 @@
                                 throw new Error('collectionType must inherit from Backbone.Collection');
                             }
 
-                            if (val instanceof BackboneCollection) {
-                                data = val;
-                                // Compute whether the context is a new one after this assignment.
-                                newCtx = (currVal !== val);
-                            } else {
-                                // Create a new collection
-                                if (!currVal) {
-                                    data = collectionType ? new collectionType() : this._createCollection(relatedModel);
-                                } else {
-                                    data = currVal;
-                                    // Setting this flag will prevent events from firing immediately. That way clients
-                                    // will not get events until the entire object graph is updated.
-                                    data._deferEvents = true;
-                                }
+                            if (currVal) {
+                                // Setting this flag will prevent events from firing immediately. That way clients
+                                // will not get events until the entire object graph is updated.
+                                currVal._deferEvents = true;
+
                                 // Use Backbone.Collection's `reset` or smart `set` method
-                                data[relationOptions.reset ? 'reset' : 'set'](val, relationOptions);
-                            }
+                                currVal[relationOptions.reset ? 'reset' : 'set'](
+                                    val instanceof BackboneCollection ? val.models : val, relationOptions);
 
-                        } else if (relation.type === Backbone.One && relatedModel) {
-                            if (val instanceof AssociatedModel) {
-                                data = val;
-                                // Compute whether the context is a new one after this assignment.
-                                newCtx = (currVal !== val);
+                                data = currVal;
+
                             } else {
-                                //Create a new model
-                                if (!currVal) {
-                                    data = new relatedModel(val, relationOptions);
+                                newCtx = true;
+
+                                if (val instanceof BackboneCollection) {
+                                    data = val;
                                 } else {
-                                    //Is the passed in data for the same key?
-                                    if (currVal && val[idKey] && currVal.get(idKey) === val[idKey]) {
-                                        // Setting this flag will prevent events from firing immediately. That way clients
-                                        // will not get events until the entire object graph is updated.
-                                        currVal._deferEvents = true;
-                                        // Perform the traditional `set` operation
-                                        currVal._set(val, relationOptions);
-                                        data = currVal;
-                                    } else {
-                                        data = new relatedModel(val, relationOptions);
-                                    }
+                                    data = collectionType ? new collectionType() : this._createCollection(relatedModel);
+                                    data[relationOptions.reset ? 'reset' : 'set'](val, relationOptions);
                                 }
                             }
 
+                        } else if (relation.type === Backbone.One) {
+
+                            if (!relatedModel)
+                                throw new Error('specify a relatedModel for Backbone.One type');
+
+                            if (!(relatedModel.prototype instanceof Backbone.AssociatedModel))
+                                throw new Error('specify an AssociatedModel for Backbone.One type');
+
+                            data = val instanceof AssociatedModel ? val : new relatedModel(val, relationOptions);
+                            //Is the passed in data for the same key?
+                            if (currVal && data.attributes[idKey] &&
+                                currVal.attributes[idKey] === data.attributes[idKey]) {
+                                // Setting this flag will prevent events from firing immediately. That way clients
+                                // will not get events until the entire object graph is updated.
+                                currVal._deferEvents = true;
+                                // Perform the traditional `set` operation
+                                currVal._set(val instanceof AssociatedModel ? val.attributes : val, relationOptions);
+                                data = currVal;
+                            } else {
+                                newCtx = true;
+                            }
+
+                        } else {
+                            throw new Error('type attribute must be specified and have the values Backbone.One or Backbone.Many');
                         }
+
 
                         attributes[relationKey] = data;
                         relationValue = data;
@@ -303,7 +340,7 @@
 
             // Manipulate `eventPath`.
             eventPath = relationKey + ((indexEventObject !== -1 && (eventType === "change" || eventPath)) ?
-                "[" + indexEventObject + "]" : "") + (eventPath ? "." + eventPath : "");
+                "[" + indexEventObject + "]" : "") + (eventPath ? pathSeparator + eventPath : "");
 
             // Short circuit collection * events
             if (/\[\*\]/g.test(eventPath)) return this;
@@ -332,7 +369,9 @@
 
             //Only fire for change. Not change:attribute
             if ("change" === eventType && this.get(eventPath) != args[2]) {
-                this.trigger.apply(this, ["nested-change", eventPath, args[1]]);
+                var ncargs = ["nested-change", eventPath, args[1]];
+                args[2] && ncargs.push(args[2]); //args[2] will be options if present
+                this.trigger.apply(this, ncargs);
             }
 
             // Remove `eventPath` from `_proxyCalls`,
@@ -361,7 +400,7 @@
             var collection, relatedModel = type;
             _.isString(relatedModel) && (relatedModel = map2Scope(relatedModel));
             // Creates new `Backbone.Collection` and defines model class.
-            if (relatedModel && relatedModel.prototype instanceof AssociatedModel) {
+            if (relatedModel && (relatedModel.prototype instanceof AssociatedModel) || _.isFunction(relatedModel)) {
                 collection = new BackboneCollection();
                 collection.model = relatedModel;
             } else {
@@ -372,8 +411,8 @@
 
         // Process all pending events after the entire object graph has been updated
         _processPendingEvents:function () {
-            if (!this.visited) {
-                this.visited = true;
+            if (!this._processedEvents) {
+                this._processedEvents = true;
 
                 this._deferEvents = false;
 
@@ -390,7 +429,7 @@
                     val && val._processPendingEvents();
                 }, this);
 
-                delete this.visited;
+                delete this._processedEvents;
             }
         },
 
@@ -408,7 +447,8 @@
 
         // The JSON representation of the model.
         toJSON:function (options) {
-            var json, aJson;
+            var json = {}, aJson;
+            json[this.idAttribute] = this.id;
             if (!this.visited) {
                 this.visited = true;
                 // Get json representation from `BackboneModel.toJSON`.
@@ -419,7 +459,7 @@
                     _.each(this.relations, function (relation) {
                         var attr = this.attributes[relation.key];
                         if (attr) {
-                            aJson = attr.toJSON(options);
+                            aJson = attr.toJSON ? attr.toJSON(options) : attr;
                             json[relation.key] = _.isArray(aJson) ? _.compact(aJson) : aJson;
                         }
                     }, this);
@@ -466,8 +506,6 @@
         }
     });
 
-    var delimiters = /[^\.\[\]]+/g;
-
     // Tokenize the fully qualified event path
     var getPathArray = function (path) {
         if (path === '') return [''];
@@ -475,26 +513,29 @@
     };
 
     var map2Scope = function (path) {
-        return _.reduce(path.split('.'), function (memo, elem) {
-            return memo[elem]
+        return _.reduce(path.split(pathSeparator), function (memo, elem) {
+            return memo[elem];
         }, root);
     };
 
     //Infer the relation from the collection's parents and find the appropriate map for the passed in `models`
     var map2models = function (parents, target, models) {
-        var relation;
+        var relation, surrogate;
         //Iterate over collection's parents
         _.find(parents, function (parent) {
             //Iterate over relations
             relation = _.find(parent.relations, function (rel) {
                 return parent.get(rel.key) === target;
             }, this);
-            if (relation) return true;//break;
+            if (relation) {
+                surrogate = parent;//surrogate for transformation
+                return true;//break;
+            }
         }, this);
 
         //If we found a relation and it has a mapping function
         if (relation && relation.map) {
-            return relation.map(models)
+            return relation.map.call(surrogate, models, target);
         }
         return models;
     };
