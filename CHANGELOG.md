@@ -3,6 +3,7 @@
 ## master (unreleased)
 
 * updated backbone 1.0.0 -> 1.1.0 - http://backbonejs.org/#changelog [@gvl]
+* updated marionette 1.1.0 -> 1.4.0 - https://github.com/marionettejs/backbone.marionette/blob/master/changelog.md [@gvl]
 
 ### Breaking Changes
 * see http://backbonejs.org/#upgrading for notes on upgrading backbone to 1.1.0
