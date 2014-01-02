@@ -1,5 +1,12 @@
 # Changelog
 
+## master
+
+* updated *backbone-stickit* 0.6.3 -> 0.7.0 - http://nytimes.github.io/backbone.stickit/#change-log [@gvl]
+
+### Breaking Changes
+* see http://nytimes.github.io/backbone.stickit/#change-log for breaking changes in backbone-stickit
+
 ## v0.1.0
 
 * updated *backbone* 1.0.0 -> 1.1.0 - http://backbonejs.org/#changelog [@gvl]

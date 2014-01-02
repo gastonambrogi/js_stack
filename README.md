@@ -50,7 +50,7 @@ https://github.com/marionettejs/backbone.marionette/tree/master/docs
 #= require js_stack/marionette
 ```
 
-### backbone.stickit 0.6.3
+### backbone.stickit 0.7.0
 
 http://nytimes.github.io/backbone.stickit/
 
