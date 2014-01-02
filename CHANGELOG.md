@@ -1,5 +1,25 @@
 # Changelog
 
+## libs
+* underscore - [changelog](http://underscorejs.org/#changelog)
+* backbone - [changelog](http://backbonejs.org/#changelog)
+* marionette - [changelog](https://github.com/marionettejs/backbone.marionette/blob/master/changelog.md)
+* backbone.stickit - [changelog](http://nytimes.github.io/backbone.stickit/#change-log)
+* backbone.validation - [changelog](https://github.com/thedersen/backbone.validation#release-notes)
+* backbone-associations - [changelog](https://github.com/dhruvaray/backbone-associations/blob/master/CHANGELOG.md)
+* backbone-pageable - [changelog](https://github.com/backbone-paginator/backbone-pageable#change-log)
+* backbone.deepmodel - [changelog](https://github.com/powmedia/backbone-deep-model#changelog)
+* backbone-virtualcollection - [changelog](https://github.com/p3drosola/Backbone.VirtualCollection#changelog)
+
+## master
+
+* updated *backbone-stickit* 0.6.3 -> 0.7.0 [@gvl]
+* updated marionette 1.4.0 -> 1.4.1 [@gvl]
+* updated backbone-pageable 1.4.1 -> 1.4.3 [@gvl]
+
+### Breaking Changes
+* see http://nytimes.github.io/backbone.stickit/#change-log for breaking changes in backbone-stickit
+
 ## v0.1.0
 
 * updated *backbone* 1.0.0 -> 1.1.0 - http://backbonejs.org/#changelog [@gvl]

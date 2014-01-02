@@ -42,7 +42,7 @@ http://backbonejs.org/
 #= require js_stack/backbone
 ```
 
-### marionette.js 1.4.0
+### marionette.js 1.4.1
 
 https://github.com/marionettejs/backbone.marionette/tree/master/docs
 
@@ -50,7 +50,7 @@ https://github.com/marionettejs/backbone.marionette/tree/master/docs
 #= require js_stack/marionette
 ```
 
-### backbone.stickit 0.6.3
+### backbone.stickit 0.7.0
 
 http://nytimes.github.io/backbone.stickit/
 
@@ -75,7 +75,7 @@ http://dhruvaray.github.io/backbone-associations/
 #= require js_stack/backbone.associations
 ```
 
-### backbone-pageable 1.4.1
+### backbone-pageable 1.4.3
 
 https://github.com/wyuenho/backbone-pageable
 
