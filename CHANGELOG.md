@@ -3,6 +3,7 @@
 ## master
 
 * updated *backbone-stickit* 0.6.3 -> 0.7.0 - http://nytimes.github.io/backbone.stickit/#change-log [@gvl]
+* updated marionette 1.4.0 -> 1.4.1 - https://github.com/marionettejs/backbone.marionette/blob/master/changelog.md [@gvl]
 
 ### Breaking Changes
 * see http://nytimes.github.io/backbone.stickit/#change-log for breaking changes in backbone-stickit
