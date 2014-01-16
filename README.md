@@ -100,6 +100,14 @@ https://github.com/p3drosola/Backbone.VirtualCollection
 #= require js_stack/backbone.virtualcollection
 ```
 
++### underscore.string 2.3.2
+
+https://github.com/epeli/underscore.string
+
+``` coffeescript
+#= require js_stack/underscore.string
+```
+
 ### hamlcoffee 1.x
 
 https://github.com/netzpirat/haml_coffee_assets

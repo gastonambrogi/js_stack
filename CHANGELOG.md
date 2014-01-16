@@ -2,6 +2,7 @@
 
 ## libs
 * underscore - [changelog](http://underscorejs.org/#changelog)
+* underscore.string - [changelog](https://github.com/epeli/underscore.string#changelog)
 * backbone - [changelog](http://backbonejs.org/#changelog)
 * marionette - [changelog](https://github.com/marionettejs/backbone.marionette/blob/master/changelog.md)
 * backbone.stickit - [changelog](http://nytimes.github.io/backbone.stickit/#change-log)
@@ -10,6 +11,10 @@
 * backbone-pageable - [changelog](https://github.com/backbone-paginator/backbone-pageable#change-log)
 * backbone.deepmodel - [changelog](https://github.com/powmedia/backbone-deep-model#changelog)
 * backbone-virtualcollection - [changelog](https://github.com/p3drosola/Backbone.VirtualCollection#changelog)
+
+## master
+
+* add underscore.string 2.3.2 [@gvl]
 
 ## v0.2.0
 
