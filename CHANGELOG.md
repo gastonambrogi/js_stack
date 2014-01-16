@@ -14,6 +14,7 @@
 ## master
 
 * updated marionette 1.4.1 -> 1.5.1 [@gvl]
+* updated backbone.validation 0.9.0 -> 0.9.1
 
 ## v0.2.0
 

@@ -58,7 +58,7 @@ http://nytimes.github.io/backbone.stickit/
 #= require js_stack/backbone.stickit
 ```
 
-### backbone.validation 0.9.0
+### backbone.validation 0.9.1
 
 https://github.com/thedersen/backbone.validation
 
