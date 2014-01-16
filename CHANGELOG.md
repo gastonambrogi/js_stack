@@ -15,6 +15,7 @@
 
 * updated marionette 1.4.1 -> 1.5.1 [@gvl]
 * updated backbone.validation 0.9.0 -> 0.9.1
+* updated backbone-pageable 1.4.3 -> 1.4.4
 
 ## v0.2.0
 
