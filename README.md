@@ -108,7 +108,7 @@ https://github.com/netzpirat/haml_coffee_assets
 #= require js_stack/hamlcoffee
 ```
 
-### momentjs 2.4.0
+### momentjs 2.5.0
 
 https://github.com/derekprior/momentjs-rails
 
