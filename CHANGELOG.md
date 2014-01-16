@@ -3,6 +3,7 @@
 ## libs
 * underscore - [changelog](http://underscorejs.org/#changelog)
 * underscore.string - [changelog](https://github.com/epeli/underscore.string#changelog)
+* underscore.inflections - [github](https://github.com/geetarista/underscore.inflections)
 * backbone - [changelog](http://backbonejs.org/#changelog)
 * marionette - [changelog](https://github.com/marionettejs/backbone.marionette/blob/master/changelog.md)
 * backbone.stickit - [changelog](http://nytimes.github.io/backbone.stickit/#change-log)
@@ -15,6 +16,7 @@
 ## master
 
 * add underscore.string 2.3.2 [@gvl]
+* add underscore.inflections 0.2.1 [@gvl]
 
 ## v0.2.0
 

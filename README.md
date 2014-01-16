@@ -108,6 +108,14 @@ https://github.com/epeli/underscore.string
 #= require js_stack/underscore.string
 ```
 
+### underscore.inflections 0.2.1
+
+https://github.com/geetarista/underscore.inflections
+
+``` coffeescript
+#= require js_stack/underscore.inflections
+```
+
 ### hamlcoffee 1.x
 
 https://github.com/netzpirat/haml_coffee_assets
