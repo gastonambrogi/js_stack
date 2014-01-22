@@ -17,6 +17,7 @@
 * updated backbone.validation 0.9.0 -> 0.9.1 [@gvl]
 * updated backbone-pageable 1.4.3 -> 1.4.4 [@gvl]
 * bump momentjs-rails 2.4.0 -> 2.5.0 [@gvl]
+* updated backbone-associations 0.5.4 -> 0.5.5 [@gvl]
 
 ## v0.2.0
 

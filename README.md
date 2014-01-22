@@ -67,7 +67,7 @@ https://github.com/thedersen/backbone.validation
 #= require js_stack/backbone.validation
 ```
 
-### backbone-associations 0.5.4
+### backbone-associations 0.5.5
 
 http://dhruvaray.github.io/backbone-associations/
 
