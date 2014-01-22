@@ -75,7 +75,7 @@ http://dhruvaray.github.io/backbone-associations/
 #= require js_stack/backbone.associations
 ```
 
-### backbone-pageable 1.4.4
+### backbone-pageable 1.4.5
 
 https://github.com/wyuenho/backbone-pageable
 
