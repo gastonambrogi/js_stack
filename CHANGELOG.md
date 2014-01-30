@@ -13,6 +13,8 @@
 
 ## master
 
+## v0.3.0
+
 * updated marionette 1.4.1 -> 1.5.1 [@gvl]
 * updated backbone.validation 0.9.0 -> 0.9.1 [@gvl]
 * updated backbone-pageable 1.4.3 -> 1.4.5 [@gvl]
