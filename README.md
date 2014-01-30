@@ -100,6 +100,24 @@ https://github.com/p3drosola/Backbone.VirtualCollection
 #= require js_stack/backbone.virtualcollection
 ```
 
+### underscore.string 2.3.2
+`not in default stack, must require it explicitly`
+
+https://github.com/epeli/underscore.string
+
+``` coffeescript
+#= require js_stack/underscore.string
+```
+
+### underscore.inflections 0.2.1
+`not in default stack, must require it explicitly`
+
+https://github.com/geetarista/underscore.inflections
+
+``` coffeescript
+#= require js_stack/underscore.inflections
+```
+
 ### hamlcoffee 1.x
 
 https://github.com/netzpirat/haml_coffee_assets
