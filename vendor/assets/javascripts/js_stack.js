@@ -1,8 +1,6 @@
 //= require js_stack/hamlcoffee
 //= require js_stack/jsroutes
 //= require js_stack/underscore
-//= require js_stack/underscore.string
-//= require js_stack/underscore.inflections
 //= require js_stack/backbone
 //= require js_stack/backbone.stickit
 //= require js_stack/marionette
