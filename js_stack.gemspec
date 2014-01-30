@@ -6,8 +6,8 @@ require 'js_stack/version'
 Gem::Specification.new do |spec|
   spec.name          = "js_stack"
   spec.version       = JsStack::VERSION
-  spec.authors       = ["Tomasz Pewiński"]
-  spec.email         = ["pewniak747@gmail.com"]
+  spec.authors       = ["Tomasz Pewiński", "Igor Dominiak"]
+  spec.email         = ["pewniak747@gmail.com", "igor.dominiak@netguru.pl"]
   spec.description   = "standard SPA stack used at netguru.co"
   spec.summary       = "standard SPA stack used at netguru.co"
   spec.homepage      = "https://github.com/netguru/js_stack"
