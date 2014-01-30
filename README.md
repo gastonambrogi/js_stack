@@ -100,7 +100,8 @@ https://github.com/p3drosola/Backbone.VirtualCollection
 #= require js_stack/backbone.virtualcollection
 ```
 
-+### underscore.string 2.3.2
+### underscore.string 2.3.2
+`not in default stack, must require it explicitly`
 
 https://github.com/epeli/underscore.string
 
@@ -109,6 +110,7 @@ https://github.com/epeli/underscore.string
 ```
 
 ### underscore.inflections 0.2.1
+`not in default stack, must require it explicitly`
 
 https://github.com/geetarista/underscore.inflections
 
