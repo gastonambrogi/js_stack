@@ -42,7 +42,7 @@ http://backbonejs.org/
 #= require js_stack/backbone
 ```
 
-### marionette.js 1.4.1
+### marionette.js 1.5.1
 
 https://github.com/marionettejs/backbone.marionette/tree/master/docs
 
@@ -58,7 +58,7 @@ http://nytimes.github.io/backbone.stickit/
 #= require js_stack/backbone.stickit
 ```
 
-### backbone.validation 0.9.0
+### backbone.validation 0.9.1
 
 https://github.com/thedersen/backbone.validation
 
@@ -67,7 +67,7 @@ https://github.com/thedersen/backbone.validation
 #= require js_stack/backbone.validation
 ```
 
-### backbone-associations 0.5.4
+### backbone-associations 0.5.5
 
 http://dhruvaray.github.io/backbone-associations/
 
@@ -75,7 +75,7 @@ http://dhruvaray.github.io/backbone-associations/
 #= require js_stack/backbone.associations
 ```
 
-### backbone-pageable 1.4.3
+### backbone-pageable 1.4.5
 
 https://github.com/wyuenho/backbone-pageable
 
@@ -108,7 +108,7 @@ https://github.com/netzpirat/haml_coffee_assets
 #= require js_stack/hamlcoffee
 ```
 
-### momentjs 2.4.0
+### momentjs 2.5.0
 
 https://github.com/derekprior/momentjs-rails
 
