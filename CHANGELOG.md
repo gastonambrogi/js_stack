@@ -13,7 +13,7 @@
 * backbone.deepmodel - [changelog](https://github.com/powmedia/backbone-deep-model#changelog)
 * backbone-virtualcollection - [changelog](https://github.com/p3drosola/Backbone.VirtualCollection#changelog)
 
-## master
+## v0.3.1
 
 * add underscore.string 2.3.2 [@gvl]
 * add underscore.inflections 0.2.1 [@gvl]
