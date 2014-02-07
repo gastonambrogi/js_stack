@@ -42,7 +42,7 @@ http://backbonejs.org/
 #= require js_stack/backbone
 ```
 
-### marionette.js 1.5.1
+### marionette.js 1.6.2
 
 https://github.com/marionettejs/backbone.marionette/tree/master/docs
 
