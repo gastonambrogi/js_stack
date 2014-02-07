@@ -1,1 +1,1 @@
-//= require js_stack/marionette/marionette-1.5.1
+//= require js_stack/marionette/marionette-1.6.2
