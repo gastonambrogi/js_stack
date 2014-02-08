@@ -13,7 +13,7 @@
 * backbone.deepmodel - [changelog](https://github.com/powmedia/backbone-deep-model#changelog)
 * backbone-virtualcollection - [changelog](https://github.com/p3drosola/Backbone.VirtualCollection#changelog)
 
-## master
+## 0.4.0
 
 * updated marionette 1.5.1 -> 1.6.2 [@gvl]
 * reorganize file structure of libs [@gvl]
