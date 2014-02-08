@@ -1,12 +1,2 @@
-//= require js_stack/hamlcoffee
-//= require js_stack/jsroutes
-//= require js_stack/underscore
-//= require js_stack/backbone
-//= require js_stack/backbone.stickit
-//= require js_stack/marionette
-//= require js_stack/backbone.validation
-//= require js_stack/backbone.pageable
-//= require js_stack/backbone.deepmodel
-//= require js_stack/backbone.associations
-//= require js_stack/backbone.virtualcollection
-//= require js_stack/moment
+//= require js_stack/base
+//= require js_stack/plugins
