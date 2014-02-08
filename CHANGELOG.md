@@ -16,6 +16,11 @@
 ## master
 
 * updated marionette 1.5.1 -> 1.6.2 [@gvl]
+* reorganize file structure of libs [@gvl]
+    - add `base.js` - require only `hamlcoffee`, `js-routes`, `backbone`, `underscore`, `marionette`
+    - add `base` folder with `lib/version` structure
+    - add `plugins.js` - require `backbone` plugins and `momentjs`
+    - add `plugins` folder with `lib/plugin/version` structure
 
 ## v0.3.1
 
