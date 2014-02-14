@@ -62,7 +62,7 @@ or specify version number
 #= require js_stack/base/backbone/1.1.0
 ```
 
-Versions: **1.1.0**, 1.0.0
+Versions: **1.1.1**, 1.1.0, 1.0.0
 
 ### marionette.js
 

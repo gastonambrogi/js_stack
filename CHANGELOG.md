@@ -16,6 +16,7 @@
 ## master
 
 * update underscore 1.5.2 -> 1.6.0 [@gvl]
+* update backbone 1.1.0 -> 1.1.1 [@gvl]
 
 ## 0.4.0
 
