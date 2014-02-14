@@ -46,7 +46,7 @@ or specify version number
 #= require js_stack/base/underscore/1.5.2
 ```
 
-Versions: **1.5.2**
+Versions: **1.6.0**, 1.5.2
 
 ### backbone.js
 
