@@ -48,7 +48,7 @@ You can require specific version of library:
 
 | Library | Versions | Changelog | Homepage | Default |
 | :-----: | :------: | :-------: | :------: | :-----: |
-| backbone associations | **0.5.5**, 0.5.4, 0.5.1 | [changelog](https://github.com/dhruvaray/backbone-associations/blob/master/CHANGELOG.md) | [homepage](http://dhruvaray.github.io/backbone-associations/) | Yes
+| backbone associations | **0.6.1**, 0.5.5, 0.5.4, 0.5.1 | [changelog](https://github.com/dhruvaray/backbone-associations/blob/master/CHANGELOG.md) | [homepage](http://dhruvaray.github.io/backbone-associations/) | Yes
 | backbone deepmodel | **0.10.4** | [changelog](https://github.com/powmedia/backbone-deep-model#changelog) | [homepage](https://github.com/powmedia/backbone-deep-model) | Yes
 | backbone mutators | **0.4.1** | [changelog](https://github.com/asciidisco/Backbone.Mutators#changelog) | [homepage](https://github.com/asciidisco/Backbone.Mutators) | No
 | backbone pageable | **1.4.5**, 1.3.2 | [changelog](https://github.com/backbone-paginator/backbone-pageable#change-log) | [homepage](https://github.com/wyuenho/backbone-pageable) | Yes

@@ -2,10 +2,11 @@
 
 ## master
 
-* add backbone.mutators 0.4.1 [@gvl]
-* add cocktail 0.5.3 [@gvl]
 * update underscore 1.5.2 -> 1.6.0 [@gvl]
 * update backbone 1.1.0 -> 1.1.1 [@gvl]
+* add cocktail 0.5.3 [@gvl]
+* add backbone.mutators 0.4.1 [@gvl]
+* update backbone.associations 0.5.5 -> 0.6.1 [@gvl]
 
 ## 0.4.0
 
