@@ -96,6 +96,22 @@ or specify version number
 
 Versions: **0.5.3**
 
+### backbone.mutators
+
+https://github.com/asciidisco/Backbone.Mutators
+
+``` coffeescript
+#= require js_stack/plugins/backbone.mutators
+```
+
+or specify version number
+
+``` coffeescript
+#= require js_stack/plugins/backbone/mutators/0.4.1
+```
+
+Versions: **0.4.1**
+
 ### backbone.stickit
 
 http://nytimes.github.io/backbone.stickit/

@@ -6,6 +6,7 @@
 * backbone-pageable - [changelog](https://github.com/backbone-paginator/backbone-pageable#change-log)
 * backbone-virtualcollection - [changelog](https://github.com/p3drosola/Backbone.VirtualCollection#changelog)
 * backbone.deepmodel - [changelog](https://github.com/powmedia/backbone-deep-model#changelog)
+* backbone.mutators - [changelog](https://github.com/asciidisco/Backbone.Mutators#changelog)
 * backbone.stickit - [changelog](http://nytimes.github.io/backbone.stickit/#change-log)
 * backbone.validation - [changelog](https://github.com/thedersen/backbone.validation#release-notes)
 * cocktail - [github](https://github.com/onsi/cocktail)
@@ -16,6 +17,7 @@
 
 ## master
 
+* add backbone.mutators 0.4.1 [@gvl]
 * add cocktail 0.5.3 [@gvl]
 * update underscore 1.5.2 -> 1.6.0 [@gvl]
 * update backbone 1.1.0 -> 1.1.1 [@gvl]
