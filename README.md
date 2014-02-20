@@ -29,8 +29,22 @@ You can require specific version of library:
 
 ```coffeescript
 #= require js_stack/base/<lib_name>/<version>
-#= require js_stack/plugins/<lib_name>/<version>
+#= require js_stack/plugins/<lib_name>/<plugin_name>/<version>
 ```
+
+Examples:
+
+```coffeescript
+#= require js_stack/base/backbone/
+#= require js_stack/base/backbone/1.0.0
+
+#= require js_stack/plugins/backbone.pageable
+#= require js_stack/plugins/backbone/pageable/1.4.5
+
+#= require js_stack/plugins/cocktail
+#= require js_stack/plugins/cocktail/0.5.3
+```
+> You cannot specify version for `hamlcoffee`, `momentjs` and `js_routes`
 
 ## What's included?
 
