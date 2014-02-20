@@ -1,8 +1,4 @@
-js-stack
-========
-
-[![Dependency Status](https://gemnasium.com/netguru/js_stack.png)](https://gemnasium.com/netguru/js_stack)
-[![Gem Version](https://badge.fury.io/rb/js_stack.png)](http://badge.fury.io/rb/js_stack)
+# js_stack [![Dependency Status](https://gemnasium.com/netguru/js_stack.png)](https://gemnasium.com/netguru/js_stack) [![Gem Version](https://badge.fury.io/rb/js_stack.png)](http://badge.fury.io/rb/js_stack)
 
 Standard JS SPA stack we use at netguru
 
@@ -20,251 +16,50 @@ And then execute:
 
 Modify `application.coffee` (you have to be using asset pipeline):
 
-``` coffeescript
+```coffeescript
 #= require js_stack
+
+# or equivalent:
+
+#= require js_stack/base
+#= require js_stack/plugins
 ```
 
-If you want to use only base stack - `hamlcoffee`, `js-routes`, `backbone`, `underscore`, `marionette`:
+You can require specific version of library:
 
-``` coffeescript
-#= require js_stack/base
+```coffeescript
+#= require js_stack/base/<lib_name>/<version>
+#= require js_stack/plugins/<lib_name>/<version>
 ```
 
 ## What's included?
 
-### underscore.js
-
-http://underscorejs.org/
-
-``` coffeescript
-#= require js_stack/base/underscore
-```
-
-or specify version number
-
-``` coffeescript
-#= require js_stack/base/underscore/1.5.2
-```
-
-Versions: **1.6.0**, 1.5.2
-
-### backbone.js
-
-http://backbonejs.org/
-
-``` coffeescript
-#= require js_stack/base/backbone
-```
-
-or specify version number
-
-``` coffeescript
-#= require js_stack/base/backbone/1.1.0
-```
-
-Versions: **1.1.1**, 1.1.0, 1.0.0
-
-### marionette.js
-
-https://github.com/marionettejs/backbone.marionette/tree/master/docs
-
-``` coffeescript
-#= require js_stack/base/marionette
-```
-
-or specify version number
-
-``` coffeescript
-#= require js_stack/base/marionette/1.6.2
-```
-
-Versions: **1.6.2**, 1.5.1, 1.4.1, 1.1.0
-
-### cocktail
-
-https://github.com/onsi/cocktail
-
-``` coffeescript
-#= require js_stack/plugins/cocktail
-```
-
-or specify version number
-
-``` coffeescript
-#= require js_stack/plugins/cocktail/0.5.3
-```
-
-Versions: **0.5.3**
-
-### backbone.mutators
-
-https://github.com/asciidisco/Backbone.Mutators
-
-``` coffeescript
-#= require js_stack/plugins/backbone.mutators
-```
-
-or specify version number
-
-``` coffeescript
-#= require js_stack/plugins/backbone/mutators/0.4.1
-```
-
-Versions: **0.4.1**
-
-### backbone.stickit
-
-http://nytimes.github.io/backbone.stickit/
-
-``` coffeescript
-#= require js_stack/plugins/backbone.stickit
-```
-
-or specify version number
-
-``` coffeescript
-#= require js_stack/plugins/backbone/stickit/0.7.0
-```
-
-Versions: **0.7.0**, 0.6.3
-
-### backbone.validation
-
-https://github.com/thedersen/backbone.validation
-
-``` coffeescript
-#= require js_stack/plugins/backbone.validation
-```
-
-or specify version number
-
-``` coffeescript
-#= require js_stack/plugins/backbone/validation/0.9.1
-```
-
-Versions: **0.9.1**, 0.8.1
-
-### backbone-associations
-
-http://dhruvaray.github.io/backbone-associations/
-
-``` coffeescript
-#= require js_stack/plugins/backbone.associations
-```
-
-or specify version number
-
-``` coffeescript
-#= require js_stack/plugins/backbone/associations/0.5.5
-```
-
-Versions: **0.5.5**, 0.5.4, 0.5.1
-
-### backbone-pageable
-
-https://github.com/wyuenho/backbone-pageable
-
-``` coffeescript
-#= require js_stack/plugins/backbone.pageable
-```
-
-or specify version number
-
-``` coffeescript
-#= require js_stack/plugins/backbone/pageable/1.4.5
-```
-
-Versions: **1.4.5**, 1.3.2
-
-### backbone.deepmodel
-
-https://github.com/powmedia/backbone-deep-model
-
-``` coffeescript
-#= require js_stack/plugins/backbone.deepmodel
-```
-
-or specify version number
-
-``` coffeescript
-#= require js_stack/plugins/backbone/deepmodel/0.10.4
-```
-
-Versions: **0.10.4**
-
-### backbone-virtualcollection
-
-https://github.com/p3drosola/Backbone.VirtualCollection
-
-``` coffeescript
-#= require js_stack/plugins/backbone.virtualcollection
-```
-
-or specify version number
-
-``` coffeescript
-#= require js_stack/plugins/backbone/virtualcollection/0.4.8
-```
-
-Versions: **0.4.8**, 0.4.5
-
-### underscore.string
-`not in default stack, must require it explicitly`
-
-https://github.com/epeli/underscore.string
-
-``` coffeescript
-#= require js_stack/plugins/underscore.string
-```
-
-or specify version number
-
-``` coffeescript
-#= require js_stack/plugins/underscore/string/2.3.2
-```
-
-Versions: **2.3.2**
-
-### underscore.inflections
-`not in default stack, must require it explicitly`
-
-https://github.com/geetarista/underscore.inflections
-
-``` coffeescript
-#= require js_stack/plugins/underscore.inflections
-```
-
-or specify version number
-
-``` coffeescript
-#= require js_stack/plugins/underscore/inflections/0.2.1
-```
-
-Versions: **0.2.1**
-
-### hamlcoffee 1.x
-
-https://github.com/netzpirat/haml_coffee_assets
-
-``` coffeescript
-#= require js_stack/base/hamlcoffee
-```
-
-### momentjs 2.5.0
-
-https://github.com/derekprior/momentjs-rails
-
-``` coffeescript
-#= require js_stack/plugins/moment
-```
-
-### js-routes 0.9.6
-
-https://github.com/railsware/js-routes
-
-``` coffeescript
-#= require js_stack/base/jsroutes
-```
+### Base
+
+| Library | Versions | Changelog | Homepage | 
+| :-----: | :------: | :-------: | :------: |
+| backbone | **1.1.1**, 1.1.0, 1.0.0 | [changelog](http://backbonejs.org/#changelog) | [homepage](http://backbonejs.org/) |
+| marionette | **1.6.2**, 1.5.1, 1.4.1, 1.1.0 | [changelog](https://github.com/marionettejs/backbone.marionette/blob/master/changelog.md) | [homepage](http://marionettejs.com/) |
+| underscore | **1.6.0**, 1.5.2 | [changelog](http://underscorejs.org/#changelog) | [homepage](http://underscorejs.org/) |
+| hamlcoffee | **1.16** | [changelog](https://github.com/netzpirat/haml_coffee_assets/blob/master/CHANGELOG.md) | [homepage](https://github.com/netzpirat/haml_coffee_assets) |
+| js-routes | **0.9.6** | none | [homepage](https://github.com/railsware/js-routes) |
+
+### Plugins
+
+| Library | Versions | Changelog | Homepage | Default |
+| :-----: | :------: | :-------: | :------: | :-----: |
+| backbone associations | **0.5.5**, 0.5.4, 0.5.1 | [changelog](https://github.com/dhruvaray/backbone-associations/blob/master/CHANGELOG.md) | [homepage](http://dhruvaray.github.io/backbone-associations/) | Yes
+| backbone deepmodel | **0.10.4** | [changelog](https://github.com/powmedia/backbone-deep-model#changelog) | [homepage](https://github.com/powmedia/backbone-deep-model) | Yes
+| backbone mutators | **0.4.1** | [changelog](https://github.com/asciidisco/Backbone.Mutators#changelog) | [homepage](https://github.com/asciidisco/Backbone.Mutators) | No
+| backbone pageable | **1.4.5**, 1.3.2 | [changelog](https://github.com/backbone-paginator/backbone-pageable#change-log) | [homepage](https://github.com/wyuenho/backbone-pageable) | Yes
+| backbone stickit | **0.7.0**, 0.6.3 | [changelog](http://nytimes.github.io/backbone.stickit/#change-log) | [homepage](http://nytimes.github.io/backbone.stickit/) | Yes
+| backbone validation | **0.9.1**, 0.8.1 | [changelog](https://github.com/thedersen/backbone.validation#release-notes) | [homepage](https://github.com/thedersen/backbone.validation) | Yes
+| backbone virtualcollection | **0.4.8**, 0.4.5 | [changelog](https://github.com/p3drosola/Backbone.VirtualCollection#changelog) | [homepage](https://github.com/p3drosola/Backbone.VirtualCollection) | Yes
+| cocktail | **0.5.3** | none | [homepage](https://github.com/onsi/cocktail) | No
+| momentjs | **2.5.1** | [changelog](https://github.com/moment/ moment/#changelog) | [homepage](https://github.com/derekprior/momentjs-rails) | No
+| underscore inflections | **0.2.1** | none | [homepage](https://github.com/geetarista/underscore.inflections) | No
+| underscore string | **2.3.2** | [changelog](https://github.com/epeli/underscore.string#changelog) | [homepage](http://epeli.github.io/underscore.string/) | No
+> Default: library is included in `js_stack/plugins`
 
 ## Contributing
 

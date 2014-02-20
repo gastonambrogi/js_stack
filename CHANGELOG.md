@@ -1,20 +1,5 @@
 # Changelog
 
-## libs
-* backbone - [changelog](http://backbonejs.org/#changelog)
-* backbone-associations - [changelog](https://github.com/dhruvaray/backbone-associations/blob/master/CHANGELOG.md)
-* backbone-pageable - [changelog](https://github.com/backbone-paginator/backbone-pageable#change-log)
-* backbone-virtualcollection - [changelog](https://github.com/p3drosola/Backbone.VirtualCollection#changelog)
-* backbone.deepmodel - [changelog](https://github.com/powmedia/backbone-deep-model#changelog)
-* backbone.mutators - [changelog](https://github.com/asciidisco/Backbone.Mutators#changelog)
-* backbone.stickit - [changelog](http://nytimes.github.io/backbone.stickit/#change-log)
-* backbone.validation - [changelog](https://github.com/thedersen/backbone.validation#release-notes)
-* cocktail - [github](https://github.com/onsi/cocktail)
-* marionette - [changelog](https://github.com/marionettejs/backbone.marionette/blob/master/changelog.md)
-* underscore - [changelog](http://underscorejs.org/#changelog)
-* underscore.inflections - [github](https://github.com/geetarista/underscore.inflections)
-* underscore.string - [changelog](https://github.com/epeli/underscore.string#changelog)
-
 ## master
 
 * add backbone.mutators 0.4.1 [@gvl]
