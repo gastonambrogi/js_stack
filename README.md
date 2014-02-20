@@ -80,6 +80,22 @@ or specify version number
 
 Versions: **1.6.2**, 1.5.1, 1.4.1, 1.1.0
 
+### cocktail
+
+https://github.com/onsi/cocktail
+
+``` coffeescript
+#= require js_stack/plugins/cocktail
+```
+
+or specify version number
+
+``` coffeescript
+#= require js_stack/plugins/cocktail/0.5.3
+```
+
+Versions: **0.5.3**
+
 ### backbone.stickit
 
 http://nytimes.github.io/backbone.stickit/
