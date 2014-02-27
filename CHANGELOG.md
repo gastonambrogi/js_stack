@@ -1,6 +1,6 @@
 # Changelog
 
-## master
+## 0.5.1
 
 * update backbone 1.1.1 -> 1.1.2 [@gvl]
 
