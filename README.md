@@ -52,7 +52,7 @@ Examples:
 
 | Library | Versions | Changelog | Homepage | 
 | :-----: | :------: | :-------: | :------: |
-| backbone | **1.1.1**, 1.1.0, 1.0.0 | [changelog](http://backbonejs.org/#changelog) | [homepage](http://backbonejs.org/) |
+| backbone | **1.1.2**, 1.1.1, 1.1.0, 1.0.0 | [changelog](http://backbonejs.org/#changelog) | [homepage](http://backbonejs.org/) |
 | marionette | **1.6.2**, 1.5.1, 1.4.1, 1.1.0 | [changelog](https://github.com/marionettejs/backbone.marionette/blob/master/changelog.md) | [homepage](http://marionettejs.com/) |
 | underscore | **1.6.0**, 1.5.2 | [changelog](http://underscorejs.org/#changelog) | [homepage](http://underscorejs.org/) |
 | hamlcoffee | **1.16** | [changelog](https://github.com/netzpirat/haml_coffee_assets/blob/master/CHANGELOG.md) | [homepage](https://github.com/netzpirat/haml_coffee_assets) |
