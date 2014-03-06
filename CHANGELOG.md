@@ -1,5 +1,9 @@
 # Changelog
 
+## master
+
+* update marionette 1.6.2 -> 1.6.4 [@gvl]
+
 ## 0.5.1
 
 * update backbone 1.1.1 -> 1.1.2 [@gvl]
