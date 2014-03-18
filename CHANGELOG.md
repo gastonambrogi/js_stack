@@ -1,5 +1,9 @@
 # Changelog
 
+## master
+
+* add backbone.routefilter 0.2.0 [@gvl]
+
 ## 0.5.2
 
 * update marionette 1.6.2 -> 1.6.4 [@gvl]

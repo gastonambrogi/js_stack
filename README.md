@@ -66,6 +66,7 @@ Examples:
 | backbone deepmodel | **0.10.4** | [changelog](https://github.com/powmedia/backbone-deep-model#changelog) | [homepage](https://github.com/powmedia/backbone-deep-model) | Yes
 | backbone mutators | **0.4.1** | [changelog](https://github.com/asciidisco/Backbone.Mutators#changelog) | [homepage](https://github.com/asciidisco/Backbone.Mutators) | No
 | backbone pageable | **1.4.5**, 1.3.2 | [changelog](https://github.com/backbone-paginator/backbone-pageable#change-log) | [homepage](https://github.com/wyuenho/backbone-pageable) | Yes
+| backbone routefilter | **0.2.0** | [changelog](https://github.com/boazsender/backbone.routefilter#release-history) | [homepage](https://github.com/boazsender/backbone.routefilter) | No
 | backbone stickit | **0.7.0**, 0.6.3 | [changelog](http://nytimes.github.io/backbone.stickit/#change-log) | [homepage](http://nytimes.github.io/backbone.stickit/) | Yes
 | backbone validation | **0.9.1**, 0.8.1 | [changelog](https://github.com/thedersen/backbone.validation#release-notes) | [homepage](https://github.com/thedersen/backbone.validation) | Yes
 | backbone virtualcollection | **0.4.8**, 0.4.5 | [changelog](https://github.com/p3drosola/Backbone.VirtualCollection#changelog) | [homepage](https://github.com/p3drosola/Backbone.VirtualCollection) | Yes
