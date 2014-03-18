@@ -1,6 +1,6 @@
 # Changelog
 
-## master
+## 0.5.3
 
 * add backbone.routefilter 0.2.0 [@gvl]
 
