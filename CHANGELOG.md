@@ -2,6 +2,7 @@
 
 # master
 
+* update backbone.mutators 0.4.1 -> 0.4.2 [@gvl]
 * update marionette 1.7.0 -> 1.7.3 [@gvl]
 
 ## 0.5.4
