@@ -1,6 +1,6 @@
 # Changelog
 
-# master
+# 0.5.5
 
 * update backbone.virtualcollection 0.4.11 -> 0.4.12 [@gvl]
 * update backbone.mutators 0.4.1 -> 0.4.2 [@gvl]
