@@ -35,7 +35,7 @@ You can require specific version of library:
 Examples:
 
 ```coffeescript
-#= require js_stack/base/backbone/
+#= require js_stack/base/backbone
 #= require js_stack/base/backbone/1.0.0
 
 #= require js_stack/plugins/backbone.pageable
