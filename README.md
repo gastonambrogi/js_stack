@@ -69,7 +69,7 @@ Examples:
 | backbone routefilter | **0.2.0** | [changelog](https://github.com/boazsender/backbone.routefilter#release-history) | [homepage](https://github.com/boazsender/backbone.routefilter) | No
 | backbone stickit | **0.7.0**, 0.6.3 | [changelog](http://nytimes.github.io/backbone.stickit/#change-log) | [homepage](http://nytimes.github.io/backbone.stickit/) | Yes
 | backbone validation | **0.9.1**, 0.8.1 | [changelog](https://github.com/thedersen/backbone.validation#release-notes) | [homepage](https://github.com/thedersen/backbone.validation) | Yes
-| backbone virtualcollection | **0.4.14**, 0.4.12, 0.4.11, 0.4.8, 0.4.5 | [changelog](https://github.com/p3drosola/Backbone.VirtualCollection#changelog) | [homepage](https://github.com/p3drosola/Backbone.VirtualCollection) | Yes
+| backbone virtualcollection | **0.4.15**, 0.4.14, 0.4.12, 0.4.11, 0.4.8, 0.4.5 | [changelog](https://github.com/p3drosola/Backbone.VirtualCollection#changelog) | [homepage](https://github.com/p3drosola/Backbone.VirtualCollection) | Yes
 | cocktail | **0.5.3** | none | [homepage](https://github.com/onsi/cocktail) | No
 | momentjs | **2.5.1** | [changelog](https://github.com/moment/moment/#changelog) | [homepage](https://github.com/derekprior/momentjs-rails) | No
 | underscore inflections | **0.2.1** | none | [homepage](https://github.com/geetarista/underscore.inflections) | No

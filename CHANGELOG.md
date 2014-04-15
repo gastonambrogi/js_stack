@@ -4,6 +4,7 @@
 
 * update marionette 1.7.4 -> 1.8.0 [@gvl]
 * update backbone.pageable 1.4.5 -> 1.4.8 [@gvl]
+* update backbone.virtualcollection 0.4.14 -> 0.4.15 [@gvl]
 
 # 0.5.6
 
