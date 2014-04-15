@@ -1,1 +1,1 @@
-//= require js_stack/plugins/backbone/pageable/1.4.5
+//= require js_stack/plugins/backbone/pageable/1.4.8
