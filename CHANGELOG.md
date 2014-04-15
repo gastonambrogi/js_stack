@@ -1,6 +1,6 @@
 # Changelog
 
-# master
+# 0.5.7
 
 * update marionette 1.7.4 -> 1.8.0 [@gvl]
 * update backbone.pageable 1.4.5 -> 1.4.8 [@gvl]
