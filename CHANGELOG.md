@@ -1,5 +1,15 @@
 # Changelog
 
+# master
+
+* remove old libraries versions and leave only the latest patch version for each minor version. Removed:
+    - backbone 1.1.1, 1.1.0
+    - marionette: 1.6.2, 1.7.3, 1.7.0
+    - backbone.associations: 0.5.1, 0.5.4
+    - backbone.mutators: 0.4.1
+    - backbone.pageable: 1.4.5
+    - backbone.virtualcollection: 0.4.14, 0.4.12, 0.4.11, 0.4.8, 0.4.5
+
 # 0.5.7
 
 * update marionette 1.7.4 -> 1.8.0 [@gvl]
