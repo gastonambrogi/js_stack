@@ -1,6 +1,6 @@
 // MarionetteJS (Backbone.Marionette)
 // ----------------------------------
-// v1.8.0
+// v1.8.3
 //
 // Copyright (c)2014 Derick Bailey, Muted Solutions, LLC.
 // Distributed under MIT license
@@ -440,6 +440,154 @@ Wreqr.EventAggregator = (function(Backbone, _){
 
   return EA;
 })(Backbone, _);
+
+  // Wreqr.Channel
+// --------------
+//
+// An object that wraps the three messaging systems:
+// EventAggregator, RequestResponse, Commands
+Wreqr.Channel = (function(Wreqr){
+  "use strict";
+
+  var Channel = function(channelName) {
+    this.vent        = new Backbone.Wreqr.EventAggregator();
+    this.reqres      = new Backbone.Wreqr.RequestResponse();
+    this.commands    = new Backbone.Wreqr.Commands();
+    this.channelName = channelName;
+  };
+
+  _.extend(Channel.prototype, {
+
+    // Remove all handlers from the messaging systems of this channel
+    reset: function() {
+      this.vent.off();
+      this.vent.stopListening();
+      this.reqres.removeAllHandlers();
+      this.commands.removeAllHandlers();
+      return this;
+    },
+
+    // Connect a hash of events; one for each messaging system
+    connectEvents: function(hash, context) {
+      this._connect('vent', hash, context);
+      return this;
+    },
+
+    connectCommands: function(hash, context) {
+      this._connect('commands', hash, context);
+      return this;
+    },
+
+    connectRequests: function(hash, context) {
+      this._connect('reqres', hash, context);
+      return this;
+    },
+
+    // Attach the handlers to a given message system `type`
+    _connect: function(type, hash, context) {
+      if (!hash) {
+        return;
+      }
+
+      context = context || this;
+      var method = (type === 'vent') ? 'on' : 'setHandler';
+
+      _.each(hash, function(fn, eventName) {
+        this[type][method](eventName, _.bind(fn, context));
+      }, this);
+    }
+  });
+
+
+  return Channel;
+})(Wreqr);
+
+  // Wreqr.Radio
+// --------------
+//
+// An object that lets you communicate with many channels.
+Wreqr.radio = (function(Wreqr){
+  "use strict";
+
+  var Radio = function() {
+    this._channels = {};
+    this.vent = {};
+    this.commands = {};
+    this.reqres = {};
+    this._proxyMethods();
+  };
+
+  _.extend(Radio.prototype, {
+
+    channel: function(channelName) {
+      if (!channelName) {
+        throw new Error('Channel must receive a name');
+      }
+
+      return this._getChannel( channelName );
+    },
+
+    _getChannel: function(channelName) {
+      var channel = this._channels[channelName];
+
+      if(!channel) {
+        channel = new Wreqr.Channel(channelName);
+        this._channels[channelName] = channel;
+      }
+
+      return channel;
+    },
+
+    _proxyMethods: function() {
+      _.each(['vent', 'commands', 'reqres'], function(system) {
+        _.each( messageSystems[system], function(method) {
+          this[system][method] = proxyMethod(this, system, method);
+        }, this);
+      }, this);
+    }
+  });
+
+
+  var messageSystems = {
+    vent: [
+      'on',
+      'off',
+      'trigger',
+      'once',
+      'stopListening',
+      'listenTo',
+      'listenToOnce'
+    ],
+
+    commands: [
+      'execute',
+      'setHandler',
+      'setHandlers',
+      'removeHandler',
+      'removeAllHandlers'
+    ],
+
+    reqres: [
+      'request',
+      'setHandler',
+      'setHandlers',
+      'removeHandler',
+      'removeAllHandlers'
+    ]
+  };
+
+  var proxyMethod = function(radio, system, method) {
+    return function(channelName) {
+      var messageSystem = radio._getChannel(channelName)[system];
+      var args = Array.prototype.slice.call(arguments, 1);
+
+      messageSystem[method].apply(messageSystem, args);
+    };
+  };
+
+  return new Radio();
+
+})(Wreqr);
 
 
   return Wreqr;
@@ -1257,10 +1405,6 @@ Marionette.View = Backbone.View.extend({
   constructor: function(options){
     _.bindAll(this, "render");
 
-    if (_.isObject(this.behaviors)) {
-      new Marionette.Behaviors(this);
-    }
-
     // this exposes view options to the view initializer
     // this is a backfill since backbone removed the assignment
     // of this.options
@@ -1269,6 +1413,11 @@ Marionette.View = Backbone.View.extend({
 
     // parses out the @ui DSL for events
     this.events = this.normalizeUIKeys(_.result(this, 'events'));
+
+    if (_.isObject(this.behaviors)) {
+      new Marionette.Behaviors(this);
+    }
+
     Backbone.View.prototype.constructor.apply(this, arguments);
 
     Marionette.MonitorDOMRefresh(this);
@@ -2208,6 +2357,11 @@ Marionette.Behavior = (function(_, Backbone){
   _.extend(Behavior.prototype, Backbone.Events, {
     initialize: function(){},
 
+    // stopListening to behavior `onListen` events.
+    close: function() {
+      this.stopListening();
+    },
+
     // Setup class level proxy for triggerMethod.
     triggerMethod: Marionette.triggerMethod
   });
@@ -2245,7 +2399,7 @@ Marionette.Behaviors = (function(Marionette, _) {
       'delegateEvents', 'undelegateEvents',
       'onShow', 'onClose',
       'behaviorEvents', 'triggerMethod',
-      'setElement'
+      'setElement', 'close'
     ]);
   }
 
@@ -2259,6 +2413,17 @@ Marionette.Behaviors = (function(Marionette, _) {
       _.each(behaviors, function(b) {
         b.$el = this.$el;
       }, this);
+    },
+
+    close: function(close, behaviors) {
+      var args = _.tail(arguments, 2);
+      close.apply(this, args);
+
+      // Call close on each behavior after
+      // closing down the view.
+      // This unbinds event listeners
+      // that behaviors have registerd for.
+      _.invoke(behaviors, 'close', args);
     },
 
     onShow: function(onShow, behaviors) {
@@ -2319,8 +2484,8 @@ Marionette.Behaviors = (function(Marionette, _) {
       undelegateEvents.apply(this, args);
 
       _.each(behaviors, function(b) {
-        Marionette.unbindEntityEvents(this, this.model, Marionette.getOption(b, "modelEvents"));
-        Marionette.unbindEntityEvents(this, this.collection, Marionette.getOption(b, "collectionEvents"));
+        Marionette.unbindEntityEvents(b, this.model, Marionette.getOption(b, "modelEvents"));
+        Marionette.unbindEntityEvents(b, this.collection, Marionette.getOption(b, "collectionEvents"));
       }, this);
     },
 
