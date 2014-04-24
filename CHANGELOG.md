@@ -1,6 +1,6 @@
 # Changelog
 
-# master
+# 0.6.0
 
 * remove old libraries versions and leave only the latest patch version for each minor version. Removed:
     - backbone 1.1.1, 1.1.0
