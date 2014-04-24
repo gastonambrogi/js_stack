@@ -10,6 +10,7 @@
     - backbone.pageable: 1.4.5
     - backbone.virtualcollection: 0.4.14, 0.4.12, 0.4.11, 0.4.8, 0.4.5
 * update marionette 1.8.0 -> 1.8.3 and remove 1.8.0 version [@gvl]
+* update backbone.stickit 0.7.0 -> 0.8.0 [@gvl]
 
 # 0.5.7
 
