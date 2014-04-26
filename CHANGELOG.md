@@ -1,5 +1,9 @@
 # Changelog
 
+# master
+
+* update momentjs 2.5.1 -> 2.6.0 [@gvl]
+
 # 0.6.0
 
 * remove old libraries versions and leave only the latest patch version for each minor version. Removed:
