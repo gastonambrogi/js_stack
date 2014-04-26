@@ -1,6 +1,6 @@
 # Changelog
 
-# master
+# 0.6.1
 
 * update momentjs 2.5.1 -> 2.6.0 [@gvl]
 
