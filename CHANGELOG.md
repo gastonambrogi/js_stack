@@ -1,6 +1,6 @@
 # Changelog
 
-# master
+# 0.6.2
 
 * update marionette 1.8.3 -> 1.8.4 and remove 1.8.3 version [@gvl]
 
