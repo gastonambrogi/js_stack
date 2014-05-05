@@ -1,5 +1,9 @@
 # Changelog
 
+# master
+
+* update marionette 1.8.3 -> 1.8.4 and remove 1.8.3 version [@gvl]
+
 # 0.6.1
 
 * update momentjs 2.5.1 -> 2.6.0 [@gvl]
