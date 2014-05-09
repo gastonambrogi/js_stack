@@ -1,5 +1,9 @@
 # Changelog
 
+# master
+
+* update backbone.routefilter 0.2.0 -> 0.2.1 [@gvl]
+
 # 0.6.2
 
 * update marionette 1.8.3 -> 1.8.4 and remove 1.8.3 version [@gvl]
