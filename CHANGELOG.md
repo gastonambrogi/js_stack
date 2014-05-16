@@ -1,5 +1,10 @@
 # Changelog
 
+# master
+
+* add backbone.paginator 2.0.0 [@gvl]
+    - backbone.pageable is now deprecated- see: https://github.com/backbone-paginator/backbone-pageable#deprecated
+
 # 0.6.3
 
 * update backbone.routefilter 0.2.0 -> 0.2.1 [@gvl]
