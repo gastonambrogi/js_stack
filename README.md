@@ -53,7 +53,7 @@ Examples:
 | Library | Versions | Changelog | Homepage |
 | :-----: | :------: | :-------: | :------: |
 | backbone | **1.1.2**, 1.0.0 | [changelog](http://backbonejs.org/#changelog) | [homepage](http://backbonejs.org/) |
-| marionette | **1.8.5**, 1.7.4, 1.6.4, 1.5.1, 1.4.1, 1.1.0 | [changelog](https://github.com/marionettejs/backbone.marionette/blob/master/changelog.md) | [homepage](http://marionettejs.com/) |
+| marionette | **1.8.8**, 1.7.4, 1.6.4, 1.5.1, 1.4.1, 1.1.0 | [changelog](https://github.com/marionettejs/backbone.marionette/blob/master/changelog.md) | [homepage](http://marionettejs.com/) |
 | underscore | **1.6.0**, 1.5.2 | [changelog](http://underscorejs.org/#changelog) | [homepage](http://underscorejs.org/) |
 | hamlcoffee | **1.16** | [changelog](https://github.com/netzpirat/haml_coffee_assets/blob/master/CHANGELOG.md) | [homepage](https://github.com/netzpirat/haml_coffee_assets) |
 | js-routes | **0.9.7** | none | [homepage](https://github.com/railsware/js-routes) |
