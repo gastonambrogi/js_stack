@@ -1,6 +1,6 @@
 # Changelog
 
-# master
+# 0.6.5
 
 * update marionette 1.8.5 -> 1.8.8 [@gvl]
 
