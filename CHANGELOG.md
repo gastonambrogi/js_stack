@@ -1,5 +1,11 @@
 # Changelog
 
+# master
+
+* update marionette 1.8.8 -> 2.0.1 [@gvl]
+    - changelog: https://github.com/Puppets/marionette-changelog-detail
+    - how to upgrade: https://github.com/marionettejs/Marionette.Upgrade
+
 # 0.6.5
 
 * update marionette 1.8.5 -> 1.8.8 [@gvl]
