@@ -1,6 +1,6 @@
 # Changelog
 
-# master
+# 0.6.6
 
 * update marionette 1.8.8 -> 2.0.1 [@gvl]
     - changelog: https://github.com/Puppets/marionette-changelog-detail
