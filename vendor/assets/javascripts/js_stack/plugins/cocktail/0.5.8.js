@@ -1,19 +1,18 @@
-//     Cocktail.js 0.5.3
+//     Cocktail.js 0.5.8
 //     (c) 2012 Onsi Fakhouri
 //     Cocktail.js may be freely distributed under the MIT license.
 //     http://github.com/onsi/cocktail
-(function() {
-    var Cocktail = {};
-
-    if (typeof exports !== 'undefined') {
-        Cocktail = exports;
+(function(factory) {
+    if (typeof require === 'function' && typeof module !== 'undefined' && module.exports) {
+        module.exports = factory(require('underscore'));
     } else if (typeof define === 'function') {
-        define(function(require) {
-            return Cocktail;
-        });
+        define(['underscore'], factory);
     } else {
-        this.Cocktail = Cocktail;
+        this.Cocktail = factory(_);
     }
+}(function (_) {
+
+    var Cocktail = {};
 
     Cocktail.mixins = {};
 
@@ -35,7 +34,8 @@
                     if (obj[key] === value) return;
 
                     if (obj[key]) {
-                        collisions[key] = collisions[key] || [obj[key]];
+                        // Avoid accessing built-in properties like constructor (#39)
+                        collisions[key] = collisions.hasOwnProperty(key) ? collisions[key] : [obj[key]];
                         collisions[key].push(value);
                     }
                     obj[key] = value;
@@ -98,4 +98,6 @@
             klass.extend = originalExtend;
         });
     };
-})();
+
+    return Cocktail;
+}));
