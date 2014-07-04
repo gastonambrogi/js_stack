@@ -1,5 +1,5 @@
 /*
-  backbone.paginator 2.0.0
+  backbone.paginator 2.0.1
   http://github.com/backbone-paginator/backbone.paginator
 
   Copyright (c) 2013 Jimmy Yuen Ho Wong and contributors
@@ -470,6 +470,10 @@
                   pageCol.push(nextModel, {onRemove: true});
                 });
               }
+              else if (!pageCol.length && state.totalRecords) {
+                pageCol.reset(fullCol.models.slice(pageStart - pageSize, pageEnd - pageSize),
+                              _extend({}, options, {parse: false}));
+              }
               fullCol.remove(model);
             }
             else if (removedIndex >= pageStart && removedIndex < pageEnd) {
@@ -479,6 +483,10 @@
                 });
               }
               pageCol.remove(model);
+              if (!pageCol.length && state.totalRecords) {
+                pageCol.reset(fullCol.models.slice(pageStart - pageSize, pageEnd - pageSize),
+                              _extend({}, options, {parse: false}));
+              }
             }
           }
           else delete options.onAdd;
@@ -1148,7 +1156,10 @@
 
       // fix up sorting parameters
       if (state.sortKey && state.order) {
-        data[queryParams.order] = this.queryParams.directions[state.order + ""];
+        var o = _isFunction(queryParams.order) ?
+          queryParams.order.call(thisCopy) :
+          queryParams.order;
+        data[o] = this.queryParams.directions[state.order + ""];
       }
       else if (!state.sortKey) delete data[queryParams.order];
 

@@ -3,6 +3,7 @@
 # master
 
 * update backbone.associations 0.6.1 -> 0.6.2 [@gvl]
+* update backbone.paginator 2.0.0 -> 2.0.1 [@gvl]
 
 # 0.6.6
 
