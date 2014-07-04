@@ -1,5 +1,9 @@
 # Changelog
 
+# master
+
+* update backbone.associations 0.6.1 -> 0.6.2 [@gvl]
+
 # 0.6.6
 
 * update marionette 1.8.8 -> 2.0.1 [@gvl]
