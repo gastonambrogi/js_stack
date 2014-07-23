@@ -1,5 +1,5 @@
 /*
-  backbone.paginator 2.0.1
+  backbone.paginator 2.0.2
   http://github.com/backbone-paginator/backbone.paginator
 
   Copyright (c) 2013 Jimmy Yuen Ho Wong and contributors
@@ -63,7 +63,6 @@
   var _isObject = _.isObject;
   var _keys = _.keys;
   var _isUndefined = _.isUndefined;
-  var _result = _.result;
   var ceil = Math.ceil;
   var floor = Math.floor;
   var max = Math.max;
@@ -1129,7 +1128,8 @@
       var data = options.data || {};
 
       // dedup query params
-      var url = _result(options, "url") || _result(this, "url") || '';
+      var url = options.url || this.url || "";
+      if (_isFunction(url)) url = url.call(this);
       var qsi = url.indexOf('?');
       if (qsi != -1) {
         _extend(data, queryStringToParams(url.slice(qsi + 1)));
