@@ -4,6 +4,7 @@
 
 * update marionette 2.0.1 -> 2.0.3 [@gvl]
 * update backbone.paginator 2.0.1 -> 2.0.2 [@gvl]
+* update backbone.virtualcollection 0.4.15 -> 0.5.0 [@gvl]
 
 # 0.6.7
 
