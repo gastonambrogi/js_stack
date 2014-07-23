@@ -1,4 +1,4 @@
-# js_stack [![Dependency Status](https://gemnasium.com/netguru/js_stack.png)](https://gemnasium.com/netguru/js_stack) [![Gem Version](https://badge.fury.io/rb/js_stack.png)](http://badge.fury.io/rb/js_stack)
+# js_stack [![Dependency Status](http://img.shields.io/gemnasium/netguru/js_stack.svg?style=flat)](https://gemnasium.com/netguru/js_stack) [![Gem Version](http://img.shields.io/gem/v/js_stack.svg?style=flat)](http://badge.fury.io/rb/js_stack)
 
 Standard JS SPA stack we use at netguru
 
