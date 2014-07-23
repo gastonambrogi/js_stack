@@ -1,6 +1,6 @@
 # Changelog
 
-# master
+# 0.6.8
 
 * update marionette 2.0.1 -> 2.0.3 [@gvl]
 * update backbone.paginator 2.0.1 -> 2.0.2 [@gvl]
