@@ -72,7 +72,7 @@ Examples:
 | backbone validation | **0.9.1**, 0.8.1 | [changelog](https://github.com/thedersen/backbone.validation#release-notes) | [homepage](https://github.com/thedersen/backbone.validation) | Yes
 | backbone virtualcollection | **0.4.15** | [changelog](https://github.com/p3drosola/Backbone.VirtualCollection#changelog) | [homepage](https://github.com/p3drosola/Backbone.VirtualCollection) | Yes
 | cocktail | **0.5.8** | none | [homepage](https://github.com/onsi/cocktail) | No
-| momentjs | **2.7.0** | [changelog](https://github.com/moment/moment/#changelog) | [homepage](https://github.com/derekprior/momentjs-rails) | No
+| momentjs | **2.7.0** | [changelog](https://github.com/moment/moment/blob/develop/CHANGELOG.md) | [homepage](https://github.com/derekprior/momentjs-rails) | No
 | underscore inflections | **0.2.1** | none | [homepage](https://github.com/geetarista/underscore.inflections) | No
 | underscore string | **2.3.2** | [changelog](https://github.com/epeli/underscore.string#changelog) | [homepage](http://epeli.github.io/underscore.string/) | No
 > Default: library is included in `js_stack/plugins`
