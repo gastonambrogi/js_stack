@@ -2,7 +2,7 @@
 
 # master
 
-* update marionette 2.0.1 -> 2.0.2 [@gvl]
+* update marionette 2.0.1 -> 2.0.3 [@gvl]
 
 # 0.6.7
 
