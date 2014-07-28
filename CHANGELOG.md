@@ -1,5 +1,9 @@
 # Changelog
 
+# master
+
+* add _.ordinalize to underscore.inflections [@jedi1156]
+
 # 0.6.8
 
 * update marionette 2.0.1 -> 2.0.3 [@gvl]
