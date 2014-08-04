@@ -1,3 +1,8 @@
+
+// internal data structure is compatible with
+// Backbone.Collection ...
+// mind = blown
+
 (function (root, factory) {
   if (typeof define === 'function' && define.amd) {
     define(['backbone', 'underscore'], function (Backbone, _) {
@@ -92,6 +97,7 @@
     },
 
     _onChange: function (model, options) {
+      if (!model || !options) return; // ignore malformed arguments coming from custom events
       var already_here = this.get(model);
 
       if (this.accepts(model, options.index)) {
