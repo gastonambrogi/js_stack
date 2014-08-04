@@ -5,6 +5,7 @@
 * add _.ordinalize to underscore.inflections [@jedi1156]
 * update marionette 2.0.3 -> 2.1.0 [@gvl]
 * update backbone.virtualcollection 0.5.0 -> 0.5.1 [@gvl]
+* remove default plugins - now `#= require js_stack` will only require base plugins: hamlcoffee, jsroutes, underscore, backbone, marionette.
 
 # 0.6.8
 
