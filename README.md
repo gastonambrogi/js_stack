@@ -1,6 +1,6 @@
 # js_stack [![Dependency Status](http://img.shields.io/gemnasium/netguru/js_stack.svg?style=flat)](https://gemnasium.com/netguru/js_stack) [![Gem Version](http://img.shields.io/gem/v/js_stack.svg?style=flat)](http://badge.fury.io/rb/js_stack)
 
-Standard JS SPA stack we use at netguru
+Standard JS SPA stack we use at [netguru](https://netguru.co)
 
 ## Installation
 
@@ -78,3 +78,5 @@ Examples:
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
+
+Copyright (c) 2013-2014 [Netguru](https://netguru.co). See LICENSE for further details.
