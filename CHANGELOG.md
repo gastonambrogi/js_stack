@@ -1,5 +1,9 @@
 # Changelog
 
+# master
+
+* update underscorse 1.6.0 -> 1.7.0 [@gvl]
+
 # 1.0.0
 
 * add _.ordinalize to underscore.inflections [@jedi1156]
