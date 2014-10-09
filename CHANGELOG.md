@@ -1,5 +1,9 @@
 # Changelog
 
+# master
+
+* update marionette 2.2.0 -> 2.2.1 [@gvl]
+
 # 1.2.0
 
 * update marionette 2.1.0 -> 2.2.0 [@gvl]
