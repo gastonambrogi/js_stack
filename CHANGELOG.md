@@ -1,5 +1,9 @@
 # Changelog
 
+# master
+
+* update backbone.virtualcollection 0.5.1 -> 0.5.2 [@gvl]
+
 # 1.2.1
 
 * update marionette 2.2.0 -> 2.2.1 [@gvl]

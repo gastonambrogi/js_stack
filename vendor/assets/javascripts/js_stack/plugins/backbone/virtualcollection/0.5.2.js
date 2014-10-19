@@ -1,7 +1,5 @@
 
-// internal data structure is compatible with
-// Backbone.Collection ...
-// mind = blown
+// Available under the MIT License (MIT)
 
 (function (root, factory) {
   if (typeof define === 'function' && define.amd) {
@@ -54,9 +52,13 @@
     },
 
     _rebuildIndex: function () {
+      for(idx in this.models) {
+        this.models[idx].off('all', this._onModelEvent, this);
+      }
       this._reset();
       this.collection.each(function (model, i) {
         if (this.accepts(model, i)) {
+          model.on('all', this._onModelEvent, this);
           this.models.push(model);
           this._byId[model.cid] = model;
           if (model.id) this._byId[model.id] = model;
@@ -82,6 +84,7 @@
     _onAdd: function (model, collection, options) {
       if (this.accepts(model, options.index)) {
         this._indexAdd(model);
+        model.on('all', this._onModelEvent, this);
         this.trigger('add', model, this, options);
       }
     },
@@ -92,7 +95,7 @@
       var i = this._indexRemove(model)
       , options_clone = _.clone(options);
       options_clone.index = i;
-
+      model.off('all', this._onModelEvent, this);
       this.trigger('remove', model, this, options_clone);
     },
 
@@ -155,6 +158,7 @@
     },
 
     _indexRemove: function (model) {
+      model.off('all', this._onModelEvent, this);
       var i = this.indexOf(model);
       if (i === -1) return i;
       this.models.splice(i, 1);

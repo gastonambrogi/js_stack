@@ -1,1 +1,1 @@
-//= require js_stack/plugins/backbone/virtualcollection/0.5.1
+//= require js_stack/plugins/backbone/virtualcollection/0.5.2
