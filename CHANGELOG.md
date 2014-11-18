@@ -1,6 +1,6 @@
 # Changelog
 
-# master
+# 1.3.0
 
 * update underscore.string 2.3.2 -> 2.4.0 [@gvl]
 
