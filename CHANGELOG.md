@@ -1,5 +1,9 @@
 # Changelog
 
+# master
+
+* update underscore.string 2.3.2 -> 2.4.0 [@gvl]
+
 # 1.2.3
 
 * update marionette 2.2.1 -> 2.2.2 [@gvl]
