@@ -59,7 +59,7 @@ Examples:
 | :-----: | :------: | :-------: | :------: |
 | backbone associations | **0.6.2**, 0.5.5 | [changelog](https://github.com/dhruvaray/backbone-associations/blob/master/CHANGELOG.md) | [homepage](http://dhruvaray.github.io/backbone-associations/) |
 | backbone deepmodel | **0.10.4** | [changelog](https://github.com/powmedia/backbone-deep-model#changelog) | [homepage](https://github.com/powmedia/backbone-deep-model) |
-| backbone mutators | **0.4.2** | [changelog](https://github.com/asciidisco/Backbone.Mutators#changelog) | [homepage](https://github.com/asciidisco/Backbone.Mutators) |
+| backbone mutators | **0.4.4** | [changelog](https://github.com/asciidisco/Backbone.Mutators#changelog) | [homepage](https://github.com/asciidisco/Backbone.Mutators) |
 | backbone pageable | **1.4.8**, 1.3.2 | [changelog](https://github.com/backbone-paginator/backbone-pageable#change-log) | [homepage](https://github.com/wyuenho/backbone-pageable) |
 | backbone paginator | **2.0.2** | [changelog](https://github.com/backbone-paginator/backbone.paginator/wiki/Changelog) | [homepage](https://github.com/backbone-paginator/backbone.paginator) |
 | backbone routefilter | **0.2.1** | [changelog](https://github.com/boazsender/backbone.routefilter#release-history) | [homepage](https://github.com/boazsender/backbone.routefilter) |

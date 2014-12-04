@@ -1,5 +1,9 @@
 # Changelog
 
+# master
+
+* update backbone.mutators 0.4.2 -> 0.4.4 [@gvl]
+
 # 1.3.0
 
 * update underscore.string 2.3.2 -> 2.4.0 [@gvl]
