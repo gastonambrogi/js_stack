@@ -1,6 +1,6 @@
 # Changelog
 
-# master
+# 1.3.1
 
 * update backbone.mutators 0.4.2 -> 0.4.4 [@gvl]
 
