@@ -1,5 +1,9 @@
 # Changelog
 
+# master
+
+* update marionette 2.2.2 -> 2.3.0 [@gvl]
+
 # 1.3.1
 
 * update backbone.mutators 0.4.2 -> 0.4.4 [@gvl]
