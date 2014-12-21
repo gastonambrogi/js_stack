@@ -1,6 +1,6 @@
 # Changelog
 
-# master
+# 1.4.0
 
 * update marionette 2.2.2 -> 2.3.0 [@gvl]
 
