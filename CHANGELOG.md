@@ -1,6 +1,6 @@
 # Changelog
 
-# master
+# 1.5.0
 
 * update js-routes to cover 1.0.0 version [@gvl]
 * update backbone.virtualcollection to 0.5.3 [@gvl]
