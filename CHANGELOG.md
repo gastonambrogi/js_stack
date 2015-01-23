@@ -3,6 +3,7 @@
 # master
 
 * update marionette 2.3.0 -> 2.3.1 [@gvl]
+* update backbone.virtualcollection 0.5.3 -> 0.6.0 [@gvl]
 
 # 1.5.0
 

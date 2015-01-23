@@ -65,7 +65,7 @@ Examples:
 | backbone routefilter | **0.2.1** | [changelog](https://github.com/boazsender/backbone.routefilter#release-history) | [homepage](https://github.com/boazsender/backbone.routefilter) |
 | backbone stickit | **0.8.0**, 0.7.0, 0.6.3 | [changelog](http://nytimes.github.io/backbone.stickit/#change-log) | [homepage](http://nytimes.github.io/backbone.stickit/) |
 | backbone validation | **0.9.1**, 0.8.1 | [changelog](https://github.com/thedersen/backbone.validation#release-notes) | [homepage](https://github.com/thedersen/backbone.validation) |
-| backbone virtualcollection | **0.5.3**, 0.4.15 | [changelog](https://github.com/p3drosola/Backbone.VirtualCollection#changelog) | [homepage](https://github.com/p3drosola/Backbone.VirtualCollection) |
+| backbone virtualcollection | **0.6.0**, 0.5.3, 0.4.15 | [changelog](https://github.com/p3drosola/Backbone.VirtualCollection/wiki/Changelog) | [homepage](https://github.com/p3drosola/Backbone.VirtualCollection) |
 | cocktail | **0.5.8** | None | [homepage](https://github.com/onsi/cocktail) |
 | momentjs | **2.8.3** | [changelog](https://github.com/moment/moment/blob/develop/CHANGELOG.md) | [homepage](https://github.com/derekprior/momentjs-rails) |
 | underscore inflections | **0.2.1** | None | [homepage](https://github.com/geetarista/underscore.inflections) |
