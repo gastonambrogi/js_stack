@@ -4,6 +4,7 @@
 
 * update marionette 2.3.0 -> 2.3.1 [@gvl]
 * update backbone.virtualcollection 0.5.3 -> 0.6.0 [@gvl]
+* update underscore.string 2.4.0 -> 3.0.1 [@gvl]
 
 # 1.5.0
 
