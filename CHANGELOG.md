@@ -1,6 +1,6 @@
 # Changelog
 
-# master
+# 1.6.0
 
 * update marionette 2.3.0 -> 2.3.1 [@gvl]
 * update backbone.virtualcollection 0.5.3 -> 0.6.0 [@gvl]
