@@ -67,7 +67,7 @@ Examples:
 | backbone validation | **0.9.1**, 0.8.1 | [changelog](https://github.com/thedersen/backbone.validation#release-notes) | [homepage](https://github.com/thedersen/backbone.validation) |
 | backbone virtualcollection | **0.6.0**, 0.5.3, 0.4.15 | [changelog](https://github.com/p3drosola/Backbone.VirtualCollection/wiki/Changelog) | [homepage](https://github.com/p3drosola/Backbone.VirtualCollection) |
 | cocktail | **0.5.8** | None | [homepage](https://github.com/onsi/cocktail) |
-| momentjs | **2.8.3** | [changelog](https://github.com/moment/moment/blob/develop/CHANGELOG.md) | [homepage](https://github.com/derekprior/momentjs-rails) |
+| momentjs | **2.9.0** | [changelog](https://github.com/moment/moment/blob/develop/CHANGELOG.md) | [homepage](https://github.com/derekprior/momentjs-rails) |
 | underscore inflections | **0.2.1** | None | [homepage](https://github.com/geetarista/underscore.inflections) |
 | underscore string | **3.0.1**, 2.4.0, 2.3.2 | [changelog](https://github.com/epeli/underscore.string/blob/master/CHANGELOG.markdown) | [homepage](http://epeli.github.io/underscore.string/) |
 
