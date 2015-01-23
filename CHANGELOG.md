@@ -1,5 +1,9 @@
 # Changelog
 
+# master
+
+* update marionette 2.3.0 -> 2.3.1 [@gvl]
+
 # 1.5.0
 
 * update js-routes to cover 1.0.0 version [@gvl]
