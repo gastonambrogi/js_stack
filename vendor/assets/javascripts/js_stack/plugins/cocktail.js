@@ -1,1 +1,1 @@
-//= require js_stack/plugins/cocktail/0.5.8
+//= require js_stack/plugins/cocktail/0.5.10

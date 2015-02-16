@@ -1,4 +1,3 @@
-//     Cocktail.js 0.5.8
 //     (c) 2012 Onsi Fakhouri
 //     Cocktail.js may be freely distributed under the MIT license.
 //     http://github.com/onsi/cocktail
@@ -23,11 +22,11 @@
 
         var collisions = {};
 
-        _(mixins).each(function(mixin) {
+        _.each(mixins, function(mixin) {
             if (_.isString(mixin)) {
                 mixin = Cocktail.mixins[mixin];
             }
-            _(mixin).each(function(value, key) {
+            _.each(mixin, function(value, key) {
                 if (_.isFunction(value)) {
                     // If the mixer already has that exact function reference
                     // Note: this would occur on an accidental mixin of the same base
@@ -49,13 +48,13 @@
             });
         });
 
-        _(collisions).each(function(propertyValues, propertyName) {
+        _.each(collisions, function(propertyValues, propertyName) {
             obj[propertyName] = function() {
                 var that = this,
                     args = arguments,
                     returnValue;
 
-                _(propertyValues).each(function(value) {
+                _.each(propertyValues, function(value) {
                     var returnedValue = _.isFunction(value) ? value.apply(that, args) : value;
                     returnValue = (typeof returnedValue === 'undefined' ? returnValue : returnedValue);
                 });
@@ -83,7 +82,7 @@
             return klass;
         };
 
-        _([Backbone.Model, Backbone.Collection, Backbone.Router, Backbone.View]).each(function(klass) {
+        _.each([Backbone.Model, Backbone.Collection, Backbone.Router, Backbone.View], function(klass) {
             klass.mixin = function mixin() {
                 Cocktail.mixin(this, _.toArray(arguments));
             };
@@ -93,7 +92,7 @@
     };
 
     Cocktail.unpatch = function unpatch(Backbone) {
-        _([Backbone.Model, Backbone.Collection, Backbone.Router, Backbone.View]).each(function(klass) {
+        _.each([Backbone.Model, Backbone.Collection, Backbone.Router, Backbone.View], function(klass) {
             klass.mixin = undefined;
             klass.extend = originalExtend;
         });
