@@ -6,6 +6,7 @@
 * update backbone.validation 0.9.1 -> 0.9.2 -> 0.11.3 [@gvl]
 * update backbone.virtualcollection 0.6.0 -> 0.6.1 [@gvl]
 * update cocktail 0.5.8 -> 0.5.10 [@gvl]
+* update underscore.string 3.0.1 -> 3.0.3 [@gvl]
 
 # 1.6.0
 

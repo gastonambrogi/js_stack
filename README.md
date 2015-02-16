@@ -69,7 +69,7 @@ Examples:
 | cocktail | **0.5.10** | None | [homepage](https://github.com/onsi/cocktail) |
 | momentjs | **2.9.0** | [changelog](https://github.com/moment/moment/blob/develop/CHANGELOG.md) | [homepage](https://github.com/derekprior/momentjs-rails) |
 | underscore inflections | **0.2.1** | None | [homepage](https://github.com/geetarista/underscore.inflections) |
-| underscore string | **3.0.1**, 2.4.0, 2.3.2 | [changelog](https://github.com/epeli/underscore.string/blob/master/CHANGELOG.markdown) | [homepage](http://epeli.github.io/underscore.string/) |
+| underscore string | **3.0.3**, 2.4.0, 2.3.2 | [changelog](https://github.com/epeli/underscore.string/blob/master/CHANGELOG.markdown) | [homepage](http://epeli.github.io/underscore.string/) |
 
 ## Contributing
 
