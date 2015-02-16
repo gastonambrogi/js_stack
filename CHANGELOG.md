@@ -3,6 +3,7 @@
 # master
 
 * update marionette 2.3.1 -> 2.3.2 [@gvl]
+* update backbone.validation 0.9.1 -> 0.9.2 -> 0.11.3 [@gvl]
 
 # 1.6.0
 
