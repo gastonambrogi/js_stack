@@ -1,11 +1,16 @@
+(function(root, factory) {
+  if (typeof define === 'function' && define.amd) {
+    define(['backbone', 'underscore'], factory);
+  } else if (typeof exports === 'object') {
+    module.exports = factory(require('backbone'), require('underscore'));
+  } else {
+    root.VirtualCollection = factory(root.Backbone, root._);
+  }
+}(this, function(Backbone, _) {
 
-// Available under the MIT License (MIT)
+// Available under the MIT License (MIT);
 
-var VirtualCollection,
-    Backbone = require('backbone'),
-    _ = require('underscore');
-
-VirtualCollection = Backbone.Collection.extend({
+var VirtualCollection = Backbone.VirtualCollection = Backbone.Collection.extend({
 
   constructor: function (collection, options) {
     options = options || {};
@@ -23,6 +28,7 @@ VirtualCollection = Backbone.Collection.extend({
     this.listenTo(this.collection, 'change', this._onChange);
     this.listenTo(this.collection, 'reset',  this._onReset);
     this.listenTo(this.collection, 'sort',  this._onSort);
+    this._proxyParentEvents(['sync', 'request', 'error']);
 
     this.initialize.apply(this, arguments);
   },
@@ -41,9 +47,7 @@ VirtualCollection = Backbone.Collection.extend({
   },
 
   _rebuildIndex: function () {
-    for(idx in this.models) {
-      this.models[idx].off('all', this._onAllEvent, this);
-    }
+    _.invoke(this.models, 'off', 'all', this._onAllEvent, this);
     this._reset();
     this.collection.each(function (model, i) {
       if (this.accepts(model, i)) {
@@ -68,6 +72,12 @@ VirtualCollection = Backbone.Collection.extend({
   _onSort: function (collection, options) {
     if (this.comparator !== undefined) return;
     this.orderViaParent(options);
+  },
+
+  _proxyParentEvents: function (events) {
+    _.each(events, function (eventName) {
+      this.listenTo(this.collection, eventName, _.partial(this.trigger, eventName));
+    }, this);
   },
 
   _onAdd: function (model, collection, options) {
@@ -176,7 +186,7 @@ VirtualCollection = Backbone.Collection.extend({
       return options;
     } else if (options.constructor === Object) {
       return function (model) {
-        return !Boolean(_(Object.keys(options)).detect(function (key) {
+        return !Boolean(_(_.keys(options)).detect(function (key) {
           return model.get(key) !== options[key];
         }));
       };
@@ -207,4 +217,5 @@ function sortedIndexTwo (array, obj, iterator, context) {
 
 _.extend(VirtualCollection.prototype, Backbone.Events);
 
-module.exports = VirtualCollection;
+return VirtualCollection;
+}));
