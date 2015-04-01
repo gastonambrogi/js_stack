@@ -3,6 +3,7 @@
 # master
 
 * update underscore 1.7.0 -> 1.8.2 [@gvl]
+* update backbone.stickit 0.8.0 -> 0.9.0 [@gvl]
 
 # 1.8.0
 
