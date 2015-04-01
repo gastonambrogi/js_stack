@@ -1,1 +1,1 @@
-//= require js_stack/base/underscore/1.7.0
+//= require js_stack/base/underscore/1.8.2

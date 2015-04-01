@@ -1,5 +1,9 @@
 # Changelog
 
+# master
+
+* update underscore 1.7.0 -> 1.8.2 [@gvl]
+
 # 1.8.0
 
 * update backbone.virtualcollection 0.6.1 -> 0.6.3 [@gvl]
