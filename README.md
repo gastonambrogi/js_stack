@@ -51,7 +51,7 @@ Examples:
 | marionette | **2.4.1**, 2.3.2, 2.2.2, 2.1.0, 2.0.3, 1.8.8, 1.7.4, 1.6.4, 1.5.1, 1.4.1, 1.1.0 | [changelog](https://github.com/marionettejs/backbone.marionette/blob/master/changelog.md) | [homepage](http://marionettejs.com/) |
 | underscore | **1.8.3**, 1.7.0, 1.6.0, 1.5.2 | [changelog](http://underscorejs.org/#changelog) | [homepage](http://underscorejs.org/) |
 | hamlcoffee | **1.16** | [changelog](https://github.com/netzpirat/haml_coffee_assets/blob/master/CHANGELOG.md) | [homepage](https://github.com/netzpirat/haml_coffee_assets) |
-| js-routes | **1.0.0** | [changelog](https://github.com/railsware/js-routes/blob/master/CHANGELOG.md) | [homepage](https://github.com/railsware/js-routes) |
+| js-routes | **1.0.1** | [changelog](https://github.com/railsware/js-routes/blob/master/CHANGELOG.md) | [homepage](https://github.com/railsware/js-routes) |
 
 ### Plugins
 
@@ -67,7 +67,7 @@ Examples:
 | backbone validation | **0.11.5**, 0.9.2, 0.8.1 | [changelog](https://github.com/thedersen/backbone.validation#release-notes) | [homepage](https://github.com/thedersen/backbone.validation) |
 | backbone virtualcollection | **0.6.6**, 0.5.3, 0.4.15 | [changelog](https://github.com/p3drosola/Backbone.VirtualCollection/wiki/Changelog) | [homepage](https://github.com/p3drosola/Backbone.VirtualCollection) |
 | cocktail | **0.5.10** | None | [homepage](https://github.com/onsi/cocktail) |
-| momentjs | **2.9.0** | [changelog](https://github.com/moment/moment/blob/develop/CHANGELOG.md) | [homepage](https://github.com/derekprior/momentjs-rails) |
+| momentjs | **2.10.2** | [changelog](https://github.com/moment/moment/blob/develop/CHANGELOG.md) | [homepage](https://github.com/derekprior/momentjs-rails) |
 | underscore inflections | **0.2.1** | None | [homepage](https://github.com/geetarista/underscore.inflections) |
 | underscore string | **3.0.3**, 2.4.0, 2.3.2 | [changelog](https://github.com/epeli/underscore.string/blob/master/CHANGELOG.markdown) | [homepage](http://epeli.github.io/underscore.string/) |
 
