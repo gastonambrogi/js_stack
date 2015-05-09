@@ -4,6 +4,7 @@
 
 * update underscore 1.8.2 -> 1.8.3 [@gvl]
 * update backbone.mutators 0.4.4 -> 0.4.5 [@gvl]
+* update backbone.validation 0.11.3 -> 0.11.5 [@gvl]
 
 # 1.9.0
 
