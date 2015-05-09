@@ -1,5 +1,9 @@
 # Changelog
 
+# master
+
+* update underscore 1.8.2 -> 1.8.3 [@gvl]
+
 # 1.9.0
 
 * update underscore 1.7.0 -> 1.8.2 [@gvl]
