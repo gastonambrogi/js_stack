@@ -105,6 +105,9 @@ var VirtualCollection = Backbone.VirtualCollection = Backbone.Collection.extend(
 
     if (this.accepts(model, options.index)) {
       if (already_here) {
+        if (!this._byId[model.id] && model.id) {
+          this._byId[model.id] = model;
+        }
         this.trigger('change', model, this, options);
       } else {
         this._indexAdd(model);
@@ -173,6 +176,10 @@ var VirtualCollection = Backbone.VirtualCollection = Backbone.Collection.extend(
     if (!_.contains(explicitlyHandledEvents, eventName)) {
       this.trigger.apply(this, arguments);
     }
+  },
+
+  clone: function () {
+    return new this.collection.constructor(this.models);
   }
 
 }, { // static props
