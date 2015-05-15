@@ -1,5 +1,9 @@
 # Changelog
 
+# master
+
+* update backbone 1.1.2 -> 1.2.0 [@gvl]
+
 # 1.10.0
 
 * update underscore 1.8.2 -> 1.8.3 [@gvl]
